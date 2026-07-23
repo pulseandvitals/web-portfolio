@@ -1,939 +1,568 @@
 <!doctype html>
 <html lang="en">
-    
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-        <title> Robert Aeron Salcedo </title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Aeron's personal website" />
-        <meta name="keywords" content="creative, cv, designer,  online cv, online resume, powerful portfolio, professional, professional resume, responsive, resume, vcard " />
-        <meta name="developer" content="Robert Aeron Salcedo">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <!-- FAV AND ICONS   -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-        <link rel="shortcut icon" href="assets/images/apple-icon.png">
-        <link rel="shortcut icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
-        <link rel="shortcut icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
-        
-        <!-- Google Font-->
-        <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/plugins/css/bootstrap.min.css">
-        <!-- Animate CSS-->
-        <link rel="stylesheet" href="assets/plugins/css/animate.css">
-        <!-- Owl Carousel CSS-->
-        <link rel="stylesheet" href="assets/plugins/css/owl.css">
-        <!-- Fancybox-->
-        <link rel="stylesheet" href="assets/plugins/css/jquery.fancybox.min.css">
-        <!-- Custom CSS-->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        
-        <!-- Colors -->
-        <link rel="alternate stylesheet" href="assets/css/colors/blue.css" title="blue">
-        <link rel="stylesheet" href="assets/css/colors/defauld.css" title="defauld">
-        <link rel="alternate stylesheet" href="assets/css/colors/green.css" title="green">
-        <link rel="alternate stylesheet" href="assets/css/colors/blue-munsell.css" title="blue-munsell">
-        <link rel="alternate stylesheet" href="assets/css/colors/orange.css" title="orange">
-        <link rel="alternate stylesheet" href="assets/css/colors/purple.css" title="purple">
-        <link rel="alternate stylesheet" href="assets/css/colors/slate.css" title="slate">
-        <link rel="alternate stylesheet" href="assets/css/colors/yellow.css" title="yellow">
-    </head>
-    <body class="dark-vertion black-bg">
-        <!-- Start Loader -->
-        <div class="section-loader">
-            <div class="loader">
-                <div></div>
-                <div></div> 
+    <meta charset="utf-8">
+    <title>Robert Aeron Salcedo — Full-Stack Web Developer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Robert Aeron Salcedo — Full-Stack Web Developer specializing in Laravel and Vue.js.">
+    <meta name="keywords" content="full stack developer, laravel, vuejs, portfolio, davao city, philippines">
+    <meta name="developer" content="Robert Aeron Salcedo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/apple-icon.png">
+    <link rel="shortcut icon" sizes="72x72" href="assets/images/apple-icon-72x72.png">
+    <link rel="shortcut icon" sizes="114x114" href="assets/images/apple-icon-114x114.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/redesign.css">
+
+    <script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('portfolio-theme');
+            document.documentElement.setAttribute('data-theme', saved === 'light' ? 'light' : 'dark');
+        } catch (e) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    })();
+    </script>
+</head>
+<body id="top">
+
+    <!-- ================= NAV ================= -->
+    <header class="nav">
+        <div class="container">
+            <a href="#top" class="nav-brand">Aeron <span>Salcedo</span></a>
+
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#work">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle light and dark theme">
+                    <i class="fa fa-moon-o theme-icon-dark" aria-hidden="true"></i>
+                    <i class="fa fa-sun-o theme-icon-light" aria-hidden="true"></i>
+                </button>
+                <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-label="Toggle menu" aria-controls="nav-mobile-panel">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
-        <!-- End Loader -->
-        
-        <!--
-        ===================
-           NAVIGATION
-        ===================
-        -->
-        <header class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav wow fadeInUp" id="mh-header">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <nav class="navbar navbar-expand-lg mh-nav nav-btn">
-                      
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon icon"></span>
-                        </button>
-                    
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-0 ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#mh-home">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#mh-about">About</a>
-                                </li>
-                                <li class="nav-item">
-                                   <a class="nav-link" href="#mh-skills">Skills</a>
-                                </li>                                
-                                <li class="nav-item">
-                                   <a class="nav-link" href="#mh-experience">Experiences</a>
-                                </li>                                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#mh-portfolio">Portfolio</a>
-                                </li>                               
-                             
-                                <li class="nav-item">
-                                   <a class="nav-link" href="#mh-contact">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        
-        <!--
-        ===================
-            HOME 
-        ===================
-        -->
-        <section class="mh-home" id="mh-home">
-            <div class="home-ovimg">
-                <div class="container">
-                    <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
-                        <div class="col-sm-6">
-                            <div class="mh-header-info">
-                                <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                                    <span>Hello I'm</span>
-                                </div>
-                                
-                                <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Robert Aeron Salcedo</h2>
-                                <h3 class="wow fadeInUp text-danger" data-wow-duration="0.8s" data-wow-delay="0.3s">Full Stack Web Developer</h3>
-                                
-                                <ul>
-                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><i class="fa fa-envelope"></i><a href="mailto:">robertaeronsalcedo@gmail.com</a></li>
-                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><i class="fa fa-phone"></i><a href="callto:">+63 945 4231 298</a></li>
-                                    <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s"><i class="fa fa-map-marker"></i><address>23-c, Salmonan Blvrd, Davao City, Philippines</address></li>
-                                </ul>
-                                
-                                <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                <div class="img-border">
-                                    <img src="assets/images/my_image.jpg" alt=""  class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>   
-        
-        <!--
-        ==================
-            ABOUT
-        =================
-        -->
-        <section class="mh-about" id="mh-about">
-            <div class="container">
-                <div class="row section-separator">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                            <img src="assets/images/ab-img.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mh-about-inner">
-                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
-                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Hello, I’m Aeron, web-developer based on Philippines. 
-                            I have built a lot of projects and developed myself as an individual and as a team-player. I am more proficient in building projects using Laravel & Vue.
-                            I have experience in web site design & building 
-                            and customization, API integration, Full stack projects and many more.<br> Here's the list of my skill sets:</p>
-                            <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                <ul>
-                                    <li><span>PHP</span></li>
-                                    <li><span>HTML</span></li>
-                                    <li><span>CSS</span></li>
-                                    <li><span>Laravel</span></li>
-                                    <li><span>Laravel Blade Directives</span></li>
-                                    <li><span>VueJS 2</span></li>
-                                    <li><span>VueJS 3</span></li>
-                                    <li><span>InertiaJS</span></li>
-                                    <li><span>LiquidPHP</span></li>
-                                    <li><span>Wordpress</span></li>
-                                    <li><span>Shopify</span></li>
-                                    <li><span>Javascript</span></li>
-                                    <li><span>JQuery</span></li>
-                                    <li><span>Tailwind CSS</span></li>
-                                    <li><span>Bootstrap CSS</span></li>
-                                    <li><span>MySQL</span></li>
-                                    <li><span>OpenAI</span></li>
-                                    <li><span>API Integration</span></li>
-                                    <li><span>SwaggerUI</span></li>
-                                    <li><span>Yii2</span></li>
-                                    <li><span>Laravel Utilities</span></li>
-                                    <li><span>RESTful API</span></li>
-                                    <li><span>GitLab</span></li>
-                                    <li><span>GitHub</span></li>
-                                    <li><span>BitBucket</span></li>
-                                    <li><span>CPanel</span></li>
-                                    <li><span>WAMP</span></li>
-                                    <li><span>Paymongo</span></li>
-                                    <li><span>Laravel Cashier</span></li>
-                                    <li><span>Laravel Livewire</span></li>
-                                    <li><span>SPA Development</span></li>
-                                    <li><span>Laravel Broadcast</span></li>
-                                    <li><span>Webhooks</span></li>
-                                </ul>
-                            </div>
-                            <a href="assets/cv/[RobertAeronSalcedo]-Resume.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Downlaod CV <i class="fa fa-download" download></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-           SERVICE
-        ===================
-        -->
-        <section class="mh-service">
-            <div class="container">
-                <div class="row section-separator">
-                    <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                        <h3>What I do</h3>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            <i class="fa fa-bullseye purple-color"></i>
-                            <h3>UX/UI</h3>
-                            <p>
-                                I do website designing and always making sure I deliver proper and awesome project designs for the clients.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                            <i class="fa fa-code iron-color"></i>
-                            <h3>Full Stack Development</h3>
-                            <p>
-                                As a Full Stack Web Developer, I made alot of full blown Laravel sites as a Solo Developer and as a team organization web developer.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                            <i class="fa fa-object-ungroup sky-color"></i>
-                            <h3>API Integration</h3>
-                            <p>
-                                Building API using RESTful API and can also integrate third party APIs.
-                            </p>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>       
-        
-        <!--
-        ===================
-           SKILLS
-        ===================
-        -->
-        <section class="mh-skills" id="mh-skills">
-            <div class="container">
-                <div class="row section-separator">
-                    <div class="section-title text-center col-sm-12">
-                        <!--<h2>Skills</h2>-->
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mh-skills-inner">
-                            <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                <h3>Technical Skills</h3>
-                                <div class="each-skills">
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">MySQL</div>
-                                                <div class="percentagem-num">89%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 89%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">Laravel/PHP</div>
-                                                <div class="percentagem-num">90%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 90%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">Shopify</div>
-                                                <div class="percentagem-num">84%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 84%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">Wordpress</div>
-                                                <div class="percentagem-num">84%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 84%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">VueJS</div>
-                                                <div class="percentagem-num">87%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 87%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">GIT</div>
-                                                <div class="percentagem-num">87%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 87%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">TailwindCSS</div>
-                                                <div class="percentagem-num">87%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 87%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">BootstrapCSS</div>
-                                                <div class="percentagem-num">89%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 89%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">HTML</div>
-                                                <div class="percentagem-num">89%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 89%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">Javascript</div>
-                                                <div class="percentagem-num">87%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 87%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">InertiaJS</div>
-                                                <div class="percentagem-num">87%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 87%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">JQuery</div>
-                                                <div class="percentagem-num">86%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 86%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">API Integration</div>
-                                                <div class="percentagem-num">86%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 86%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">Blade Directives</div>
-                                                <div class="percentagem-num">89%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 89%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">RESTful API</div>
-                                                <div class="percentagem-num">88%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 88%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">Laravel Livewire</div>
-                                                <div class="percentagem-num">88%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 88%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="candidatos">
-                                        <div class="parcial">
-                                            <div class="info">
-                                                <div class="nome">Payment Gateway</div>
-                                                <div class="percentagem-num">89%</div>
-                                            </div>
-                                            <div class="progressBar">
-                                                <div class="percentagem" style="width: 89%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                            <h3>Professional Skills</h3>
-                            <ul class="mh-professional-progress" >
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="90"></div>
-                                    <div class="pr-skill-name">Communication</div>
-                                </li>
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="89"></div> 
-                                    <div class="pr-skill-name">Team Work</div>
-                                </li>
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="91"></div> 
-                                    <div class="pr-skill-name">Problem Solving</div>
-                                </li>
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="92"></div> 
-                                    <div class="pr-skill-name">Decision Making</div>
-                                </li>
-                             
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="87"></div>
-                                    <div class="pr-skill-name">Project Management</div>
-                                </li> 
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="89"></div>
-                                    <div class="pr-skill-name">Creativity</div>
-                                </li>
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="90"></div>
-                                    <div class="pr-skill-name">Flexibility</div>
-                                </li>
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="89"></div>
-                                    <div class="pr-skill-name">Conflict Management</div>
-                                </li>
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="91"></div>
-                                    <div class="pr-skill-name">Adaptability</div>
-                                </li>
-                                <li>
-                                    <div class="mh-progress mh-progress-circle" data-progress="92"></div>
-                                    <div class="pr-skill-name">Collaboration</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-           EXPERIENCES
-        ===================
-        -->
-        <section class="mh-experince" id="mh-experience">
-            <div class="bolor-overlay">
-                <div class="container">
-                    <div class="row section-separator">
-                        <div class="col-sm-12 col-md-6">
-                            <div class="mh-education">
-                                 <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Education</h3>
-                                <div class="mh-education-deatils">
-                                    <!-- Education Institutes-->
-                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                        <h4>Cabantian National High School <a href="#">Davao City</a></h4>
-                                        <div class="mh-eduyear">2009-2013</div>
-                                       
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                        <h4>University Of Mindanao College<a href="#">Davao City</a></h4>
-                                        <div class="mh-eduyear">2013-2019</div>
-                                        <p>Bachelor of Science in Information Technology</p>
-                                    </div>                                
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="mh-work">
-                                 <h3>Work Experience</h3>
-                                <div class="mh-experience-deatils">
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                        <h4>Full Stack Web Developer<a href="#"> Segworks</a></h4>
-                                        <div class="mh-eduyear">Mar 2019 – April 2020</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Database maintenance</li>
-                                            <li><i class="fa fa-circle"></i>Developed new feature for site</li>
-                                            <li><i class="fa fa-circle"></i>Debugging</li>
-                                            <li><i class="fa fa-circle"></i>Refactoring database queries</li>
-                                        </ul>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                                        <h4>Full Stack Web Developer<a href="#"> Artisans Developer</a></h4>
-                                        <div class="mh-eduyear">May 2020 – April 2021</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Developed sites from different platforms like Laravel,WordPress & Shopify</li>
-                                            <li><i class="fa fa-circle"></i>UI Designing</li>
-                                            <li><i class="fa fa-circle"></i>Web Development</li>
-                                            <li><i class="fa fa-circle"></i>Graphic Designing using Canva</li>
-                                        </ul>
-                                    </div>                                
-                                    <!-- Education Institutes-->
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                        <h4>Full Stack Web Developer<a href="#"> FoxComm Ltd</a></h4>
-                                        <div class="mh-eduyear">April 2021 – April 2023</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Developed projects using Laravel VueJS InertiaJS</li>
-                                            <li><i class="fa fa-circle"></i>Project Management</li>
-                                            <li><i class="fa fa-circle"></i>Developed blog sites using Wordpress</li>
-                                            <li><i class="fa fa-circle"></i>Design and maintain single vendor site using Shopify</li>
-                                        </ul>
-                                    </div>
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                        <h4>Backend Developer<a href="#"> CresCode Inc.</a></h4>
-                                        <div class="mh-eduyear">April 2023 – December 2023</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Developed API</li>
-                                            <li><i class="fa fa-circle"></i>Refactoring API functionalities</li>
-                                            <li><i class="fa fa-circle"></i>Migrating old laravel projects to updated versions</li>
-                                            <li><i class="fa fa-circle"></i>API testing in SwaggerUI</li>
-                                        </ul>
-                                    </div>
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                        <h4>Full Stack Web Developer<a href="#"> Nest18</a></h4>
-                                        <div class="mh-eduyear">Project Based</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Developed auto generated header for writers using OpenAI</li>
-                                            <li><i class="fa fa-circle"></i>Developed family tree hierarchy for header labeling</li>
-                                            <li><i class="fa fa-circle"></i>Developed scraping AI to help track all of the trending headers from search engine</li>
-                                            <li><i class="fa fa-circle"></i>Developed using Laravel Vue Inertia and Tailwindcss</li>
-                                        </ul>
-                                    </div>
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                        <h4>Full Stack Web Developer<a href="#"> Local Client </a></h4>
-                                        <div class="mh-eduyear">Project Based</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Developed hair cut scheduling system</li>
-                                            <li><i class="fa fa-circle"></i>Developed multi tenancy app for users</li>
-                                            <li><i class="fa fa-circle"></i>Added security and efficiency of the site</li>
-                                            <li><i class="fa fa-circle"></i>Developed using Laravel with blade components and bootstrapCSS.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                        <h4>Full Stack Web Developer<a href="#"> VPI Cars Manila</a></h4>
-                                        <div class="mh-eduyear">Contractual</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Developed car rental app that accessible nationwide.</li>
-                                            <li><i class="fa fa-circle"></i>Developed user friendly for admin and affiliates for fast booking from end to end.</li>
-                                            <li><i class="fa fa-circle"></i>Added security and efficiency of the site</li>
-                                            <li><i class="fa fa-circle"></i>Developed using RestFUL API Laravel with VueJS components and TailwindCSS.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                        <h4>Full Stack Web Developer<a href="#"> TITAN Inc. </a></h4>
-                                        <div class="mh-eduyear">Full Time</div>
-                                        <span>Responsibility :</span>
-                                        <ul class="work-responsibility">
-                                            <li><i class="fa fa-circle"></i>Developed MSWD for Makati Government in the Philippines.</li>
-                                            <li><i class="fa fa-circle"></i>Developed fast and user friendly for admin and users of Makati.</li>
-                                            <li><i class="fa fa-circle"></i>Developed multi security of the app to maintain accuracy of data</li>
-                                            <li><i class="fa fa-circle"></i>Developed fast and efficient queries to maintain smoothness of the application.</li>
-                                            <li><i class="fa fa-circle"></i>Developed using RestFUL API Laravel with VueJS components and Bootstrap CSS.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!--
-        ===================
-           PORTFOLIO
-        ===================
-        -->
-        <section class="mh-portfolio" id="mh-portfolio">
-            <div class="container">
-                <div class="row section-separator">
-                    <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                        <h3>Some of my Personal Portfolios</h3>
-                    </div>
-                    <div class="part col-sm-12">
-                        <div class="portfolio-nav col-sm-12" id="filter-button">
-                        </div>
-                        <div class="mh-project-gallery col-sm-12 wow fadeInUp" id="project-gallery" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                            <div class="portfolioContainer row">
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/aenlinejob-2.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/aenlinejob-2.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/arivo.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/arivo.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/cmb-portal.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/cmb-portal.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/nest18-2.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/nest18-2.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/purpleroof-2.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/purpleroof-2.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/shofee-pay.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/shofee-pay.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/shofee-pay-2.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/shofee-pay-2.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/cms.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/cms.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/nest18-3.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/nest18-3.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/arivo-2.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Web development</span>
-                                            <a href="assets/images/portfolio_image/arivo-2.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/purpleroof.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio_image/purpleroof.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
-                                    <figure>
-                                        <img src="assets/images/portfolio_image/purpleroof-3.png" alt="img04">
-                                        <figcaption class="fig-caption">
-                                            <i class="fa fa-search"></i>
-                                            <h5 class="title">Creative Design</h5>
-                                            <span class="sub-title">Photograpy</span>
-                                            <a href="assets/images/portfolio_image/purpleroof-3.png"></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div> <!-- End: .grid .project-gallery -->
-                        </div> <!-- End: .grid .project-gallery -->
-                    </div> <!-- End: .part -->
-                </div> <!-- End: .row -->
-            </div>
-        </section>
-        <!--
-        ===================
-           FOOTER 1
-        ===================
-        -->
-        <footer class="mh-footer" id="mh-contact">
-            <div class="map-image image-bg">
-                <div class="container">
-                    <div class="row section-separator">
-                        <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                            <h3>Contact Me</h3>
-                        </div>
-                        <div class="col-sm-12 mh-footer-address">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-4">
-                                    <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                        <div class="each-icon">
-                                            <i class="fa fa-location-arrow"></i>
-                                        </div>
-                                        <div class="each-info">
-                                            <h4>Address</h4>
-                                            <address>
-                                                23-C, Salmonan Blvrd <br> 
-                                                 Davao City, Philippines
-                                            </address>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4">
-                                    <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                        <div class="each-icon">
-                                            <i class="fa fa-envelope-o"></i>
-                                        </div>
-                                        <div class="each-info">
-                                            <h4>Email</h4>
-                                            <a href="mailto:robertaeronsalcedo@email.com">robertaeronsalcedo@umindanao.edu.ph</a><br>
-                                            <a href="mailto:robertaeronsalcedo@email.com">robertaeronsalcedo@email.com</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4">
-                                    <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                        <div class="each-icon">
-                                            <i class="fa fa-phone"></i>
-                                        </div>
-                                        <div class="each-info">
-                                            <h4>Phone</h4>
-                                            <a href="callto:+63 945 423 1298">+63 945 423 1298</a><br>
-                                            <a href="callto:+63 945 423 1298">+63 945 423 1298</a><br>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            <form id="contactForm" class="single-form quate-form wow fadeInUp" data-toggle="validator">
-                                <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12">
-                                        <input name="name" class="contact-name form-control" id="name" type="text" placeholder="First Name" required>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <input name="name" class="contact-email form-control" id="L_name" type="text" placeholder="Last Name" required>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <input name="name" class="contact-subject form-control" id="email" type="email" placeholder="Your Email" required>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <textarea class="contact-message" id="message" rows="6" placeholder="Your Message" required></textarea>
-                                    </div>
-                                    <!-- Subject Button -->
-                                    <div class="btn-form col-sm-12">
-                                        <button type="submit" class="btn btn-fill btn-block" id="form-submit">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                            <div class="mh-map">
-                                <div id="mh-map" class="shadow-1"></div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 mh-copyright wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="text-left text-xs-center">
-                                        <p>Robert Aeron Salcedo</p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="social-icon">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>     
-    
-    <!--
-    ==============
-    * JS Files *
-    ==============
-    -->
-    
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
-    <!-- jQuery -->
-    <script src="assets/plugins/js/jquery.min.js"></script>
-    <!-- popper -->
-    <script src="assets/plugins/js/popper.min.js"></script>
-    <!-- bootstrap -->
-    <script src="assets/plugins/js/bootstrap.min.js"></script>
-    <!-- owl carousel -->
-    <script src="assets/plugins/js/owl.carousel.js"></script>
-    <!-- validator -->
-    <script src="assets/plugins/js/validator.min.js"></script>
-    <!-- wow -->
-    <script src="assets/plugins/js/wow.min.js"></script>
-    <!-- mixin js-->
-    <script src="assets/plugins/js/jquery.mixitup.min.js"></script>
-    <!-- circle progress-->
-    <script src="assets/plugins/js/circle-progress.js"></script>
-    <!-- jquery nav -->
-    <script src="assets/plugins/js/jquery.nav.js"></script>
-    <!-- Fancybox js-->
-    <script src="assets/plugins/js/jquery.fancybox.min.js"></script>
-    <!-- isotope js-->
-    <script src="assets/plugins/js/isotope.pkgd.js"></script>
-    <script src="assets/plugins/js/packery-mode.pkgd.js"></script>
-    <!-- Map api -->
-    <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script>
-    <!-- Custom Scripts-->
-    <script src="assets/js/map-init.js"></script>
-    <script src="assets/js/custom-scripts.js"></script>
-    
-</body>
+    </header>
 
+    <div class="nav-mobile-panel" id="nav-mobile-panel">
+        <div class="container">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-photo">
+                <img src="assets/images/my_image.jpg" alt="Robert Aeron Salcedo">
+            </div>
+
+            <div>
+                <span class="hero-eyebrow">Hello, I'm</span>
+                <h1>Robert Aeron Salcedo</h1>
+                <p class="hero-role">Full-Stack Web Developer — Laravel &amp; Vue.js specialist</p>
+
+                <ul class="hero-meta">
+                    <li><i class="fa fa-envelope-o"></i> robertaeronsalcedo@gmail.com</li>
+                    <li><i class="fa fa-phone"></i> +63 945 4231 298</li>
+                    <li><i class="fa fa-map-marker"></i> Davao City, Philippines</li>
+                </ul>
+
+                <div class="hero-actions">
+                    <a href="assets/cv/Aeron_Latest_Resume.pdf" class="btn btn-solid" download>
+                        <i class="fa fa-download"></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">Contact Me</a>
+                    <a href="#work" class="btn btn-ghost">View Work</a>
+                </div>
+
+                <div class="social-row">
+                    <a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a class="icon-btn" href="#" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                    <a class="icon-btn" href="#" aria-label="Dribbble"><i class="fa fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT + SKILLS ================= -->
+    <section id="about">
+        <div class="container">
+            <span class="section-kicker">About</span>
+            <h2 class="section-title">Background &amp; toolkit</h2>
+            <p class="section-lede">A quick rundown of who I am and the tools I build with day to day.</p>
+
+            <div class="about-grid">
+                <div class="about-bio reveal">
+                    <p>I'm a web developer based in Davao City, Philippines, focused on building full-stack applications end to end — from database and API design to the interfaces people actually use.</p>
+                    <p>Most of my work is built on Laravel and Vue.js, spanning client projects, government systems, e-commerce and internal tools, plus a handful of personal products I maintain in production.</p>
+
+                    <div class="stat-row">
+                        <div>
+                            <span class="stat-num">8+</span>
+                            <span class="stat-label">Years experience</span>
+                        </div>
+                        <div>
+                            <span class="stat-num">20+</span>
+                            <span class="stat-label">Projects delivered</span>
+                        </div>
+                        <div>
+                            <span class="stat-num">10+</span>
+                            <span class="stat-label">Companies &amp; clients</span>
+                        </div>
+                    </div>
+
+                    <ul class="focus-list">
+                        <li>Full-stack web development (Laravel, Vue, InertiaJS)</li>
+                        <li>REST API design &amp; third-party integrations</li>
+                        <li>AI-assisted tooling (OpenAI, Claude, Gemini)</li>
+                        <li>Payment gateway integration (PayMongo, Cashier)</li>
+                    </ul>
+                </div>
+
+                <div class="about-skills reveal">
+                    <div class="skill-group">
+                        <div class="skill-group-title">Backend</div>
+                        <div class="tag-row">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Laravel Ecosystem</span>
+                            <span class="tag">Blade</span>
+                            <span class="tag">Livewire</span>
+                            <span class="tag">Laravel Broadcast</span>
+                            <span class="tag">Yii2</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">RESTful API</span>
+                            <span class="tag">SwaggerUI</span>
+                            <span class="tag">Postman</span>
+                            <span class="tag">Webhooks</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title">Frontend</div>
+                        <div class="tag-row">
+                            <span class="tag">Vue 2 / 3</span>
+                            <span class="tag">Pinia</span>
+                            <span class="tag">InertiaJS</span>
+                            <span class="tag">ReactJS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">jQuery</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Bootstrap CSS</span>
+                            <span class="tag">HTML / CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title">CMS, database &amp; payments</div>
+                        <div class="tag-row">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">WordPress Plugins</span>
+                            <span class="tag">Custom Themes</span>
+                            <span class="tag">WooCommerce</span>
+                            <span class="tag">Shopify</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">PayMongo</span>
+                            <span class="tag">Laravel Cashier</span>
+                            <span class="tag">Payment Gateway Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title">Server &amp; DevOps</div>
+                        <div class="tag-row">
+                            <span class="tag">Docker</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">GitLab</span>
+                            <span class="tag">BitBucket</span>
+                            <span class="tag">FTP</span>
+                            <span class="tag">SSH</span>
+                            <span class="tag">CLI</span>
+                            <span class="tag">Hostinger</span>
+                            <span class="tag">cPanel</span>
+                            <span class="tag">Domain / DNS Config</span>
+                            <span class="tag">Cron</span>
+                            <span class="tag">Supervisor</span>
+                            <span class="tag">WAMP</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title">AI experience</div>
+                        <div class="tag-row">
+                            <span class="tag">Claude AI</span>
+                            <span class="tag">Claude MCP</span>
+                            <span class="tag">ChatGPT</span>
+                            <span class="tag">OpenAI</span>
+                            <span class="tag">Gemini</span>
+                            <span class="tag">Gamma AI</span>
+                            <span class="tag">GitHub Copilot</span>
+                            <span class="tag">Perplexity</span>
+                            <span class="tag">Sage Pilot</span>
+                            <span class="tag">DeepSeek</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title">Design &amp; collaboration</div>
+                        <div class="tag-row">
+                            <span class="tag">Canva</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Illustrator</span>
+                            <span class="tag">Jira</span>
+                            <span class="tag">Trello</span>
+                            <span class="tag">Slack</span>
+                            <span class="tag">Teams</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <div class="skill-group-title">Working style</div>
+                        <div class="tag-row">
+                            <span class="tag">Communication</span>
+                            <span class="tag">Problem Solving</span>
+                            <span class="tag">Project Management</span>
+                            <span class="tag">Collaboration</span>
+                            <span class="tag">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience">
+        <div class="container">
+            <span class="section-kicker">Experience</span>
+            <h2 class="section-title">Education &amp; work history</h2>
+            <p class="section-lede">Where I studied and the teams I've built software with since 2019.</p>
+
+            <div class="edu-block">
+                <div class="exp-col-title">Education</div>
+                <div class="timeline timeline--grid">
+                    <div class="timeline-item">
+                        <h4>University of Mindanao College</h4>
+                        <span class="org">Davao City</span>
+                        <span class="period">2013 – 2019</span>
+                        <p>Bachelor of Science in Information Technology</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Cabantian National High School</h4>
+                        <span class="org">Davao City</span>
+                        <span class="period">2009 – 2013</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-block">
+                <div class="exp-col-title">Work experience</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">RCSC Ltd — Remote (US)</span>
+                        <span class="period">Heavy Equipment Rental · Solo Development</span>
+                        <p>Developed a full-featured heavy equipment rental platform enabling efficient booking, real-time inventory management and seamless customer interactions, with a responsive interface optimized across desktop and mobile.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue 3</span>
+                            <span class="tag">InertiaJS</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Stripe API</span>
+                            <span class="tag">CalendarJS</span>
+                            <span class="tag">ChatGPT</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">GuttVannm Architect — Remote (US)</span>
+                        <span class="period">Solo Development</span>
+                        <p>Built a scheduling app for architectural laser scan requests — clients see the shortest technician route on booking, plus full visibility into scan requests and scheduled appointments.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue 3</span>
+                            <span class="tag">InertiaJS</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">ChatGPT</span>
+                            <span class="tag">GitHub Copilot</span>
+                            <span class="tag">Stripe API</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">Wisteria Online &amp; Wasteland MMORPG</span>
+                        <span class="period">Personal Project · Solo Development</span>
+                        <p>Built modular PvP/PvE systems with real-time polling, pause/resume controls and scalable event triggers, plus forums, guild tools and event calendars to drive player retention. Zones, factions and quest lines are inspired by Filipino culture.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue 3</span>
+                            <span class="tag">InertiaJS</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Canva</span>
+                            <span class="tag">ChatGPT</span>
+                            <span class="tag">GitHub Copilot</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">TITAN Inc.</span>
+                        <span class="period">Full time</span>
+                        <p>Developed the MSWD system for Makati City Government, with layered security and query optimization for data accuracy and performance at scale.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Bootstrap CSS</span>
+                            <span class="tag">RESTful API</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">VPI Cars Manila</span>
+                        <span class="period">Contractual</span>
+                        <p>Built a nationwide car rental platform with end-to-end admin and affiliate booking workflows.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">RESTful API</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">Local Client</span>
+                        <span class="period">Project based</span>
+                        <p>Built a hair-cut scheduling system with multi-tenancy support for multiple business locations.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Blade</span>
+                            <span class="tag">Bootstrap CSS</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">Nest18</span>
+                        <span class="period">Project based</span>
+                        <p>Built OpenAI-assisted header generation for writers, including a family-tree hierarchy for header labeling.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">InertiaJS</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">OpenAI</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Backend Developer</h4>
+                        <span class="org">CresCode Inc.</span>
+                        <span class="period">Apr 2023 – Dec 2023</span>
+                        <p>Developed and refactored REST APIs, migrated legacy Laravel projects to newer versions, and tested endpoints in SwaggerUI.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">RESTful API</span>
+                            <span class="tag">SwaggerUI</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">FoxComm Ltd</span>
+                        <span class="period">Apr 2021 – Apr 2023</span>
+                        <p>Built projects with Laravel, Vue and InertiaJS, managed WordPress blogs, and maintained a single-vendor Shopify store.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">InertiaJS</span>
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Shopify</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">Artisans Developer</span>
+                        <span class="period">May 2020 – Apr 2021</span>
+                        <p>Built sites on Laravel, WordPress and Shopify, with UI and graphic design work in Canva.</p>
+                        <div class="tag-row">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Shopify</span>
+                            <span class="tag">Canva</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Full Stack Web Developer</h4>
+                        <span class="org">Segworks</span>
+                        <span class="period">Mar 2019 – Apr 2020</span>
+                        <p>Maintained databases, refactored queries, and developed new features and fixes.</p>
+                        <div class="tag-row">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LIVE PROJECTS ================= -->
+    <section id="projects">
+        <div class="container">
+            <span class="section-kicker">Live Projects</span>
+            <h2 class="section-title">Products in production</h2>
+            <p class="section-lede">Personal projects I've built and deployed that are live and running today.</p>
+
+            <div class="project-grid">
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <h3>Wisteria Online</h3>
+                        <i class="fa fa-external-link"></i>
+                    </div>
+                    <p>Browser-based MMORPG with persistent player progression and real-time systems.</p>
+                    <div class="tag-row">
+                        <span class="tag">MMORPG</span>
+                        <span class="tag">Game Dev</span>
+                    </div>
+                    <a class="btn btn-ghost btn-sm" href="https://wisteriaonline.com" target="_blank" rel="noopener">Visit site</a>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <h3>Wasteland MMORPG</h3>
+                        <i class="fa fa-external-link"></i>
+                    </div>
+                    <p>Post-apocalyptic themed browser MMORPG.</p>
+                    <div class="tag-row">
+                        <span class="tag">MMORPG</span>
+                        <span class="tag">Game Dev</span>
+                    </div>
+                    <a class="btn btn-ghost btn-sm" href="https://wastelandmmorpg.com" target="_blank" rel="noopener">Visit site</a>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <h3>AeTask</h3>
+                        <i class="fa fa-external-link"></i>
+                    </div>
+                    <p>Kanban-style board and workflow management tool for teams.</p>
+                    <div class="tag-row">
+                        <span class="tag">Productivity</span>
+                        <span class="tag">SaaS</span>
+                    </div>
+                    <a class="btn btn-ghost btn-sm" href="https://aetask.xyz" target="_blank" rel="noopener">Visit site</a>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <h3>HJKL Core</h3>
+                        <i class="fa fa-external-link"></i>
+                    </div>
+                    <p>Multi-tenant point-of-sale platform for multiple businesses.</p>
+                    <div class="tag-row">
+                        <span class="tag">POS</span>
+                        <span class="tag">Multi-tenant</span>
+                    </div>
+                    <a class="btn btn-ghost btn-sm" href="https://hjklcore.com" target="_blank" rel="noopener">Visit site</a>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-card-top">
+                        <h3>SICI Producers CTPL</h3>
+                        <i class="fa fa-external-link"></i>
+                    </div>
+                    <p>Online CTPL insurance issuance platform for SICI producers.</p>
+                    <div class="tag-row">
+                        <span class="tag">Insurance</span>
+                        <span class="tag">Fintech</span>
+                    </div>
+                    <a class="btn btn-ghost btn-sm" href="https://siciproducersctpl.com" target="_blank" rel="noopener">Visit site</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PORTFOLIO / SELECTED WORK ================= -->
+    <section id="work">
+        <div class="container">
+            <span class="section-kicker">Selected Work</span>
+            <h2 class="section-title">Project screens</h2>
+            <p class="section-lede">A closer look at interfaces I've designed and built across client and personal projects.</p>
+
+            <div class="gallery-list" id="portfolio-galleries"></div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+        <div class="container">
+            <span class="section-kicker">Contact</span>
+            <h2 class="section-title">Let's build something</h2>
+            <p class="section-lede">Open to full-stack roles and freelance projects — reach out any of these ways.</p>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fa fa-envelope-o"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:robertaeronsalcedo@gmail.com">robertaeronsalcedo@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa fa-phone"></i>
+                    <h4>Phone</h4>
+                    <a href="tel:+639454231298">+63 945 4231 298</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa fa-map-marker"></i>
+                    <h4>Location</h4>
+                    <span>Davao City, Philippines</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa fa-share-alt"></i>
+                    <h4>Social</h4>
+                    <div class="social-row" style="margin-top:8px;">
+                        <a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a class="icon-btn" href="#" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>© 2026 Robert Aeron Salcedo. All rights reserved.</span>
+            <span>Designed &amp; built by Aeron.</span>
+        </div>
+    </footer>
+
+    <!-- ================= LIGHTBOX ================= -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close"><i class="fa fa-times"></i></button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image"><i class="fa fa-chevron-left"></i></button>
+        <img id="lightbox-img" src="" alt="Project screenshot">
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next image"><i class="fa fa-chevron-right"></i></button>
+        <span class="lightbox-counter" id="lightbox-counter"></span>
+    </div>
+
+    <script src="assets/js/portfolio-data.js"></script>
+    <script src="assets/js/redesign.js"></script>
+</body>
 </html>

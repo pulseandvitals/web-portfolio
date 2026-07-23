@@ -3880,4 +3880,162 @@ BLOG Pagination
   margin-bottom: 30px;
   margin-top: 20px;
 }
+
+/*
+===============================
+ENHANCED ANIMATIONS
+===============================
+*/
+
+/* Portfolio Grid Item Animations */
+.mh-project-gallery .grid-item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.mh-project-gallery .grid-item:hover {
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
+  -webkit-box-shadow: 0 10px 30px rgba(11, 206, 175, 0.3);
+  -moz-box-shadow: 0 10px 30px rgba(11, 206, 175, 0.3);
+  box-shadow: 0 10px 30px rgba(11, 206, 175, 0.3);
+}
+
+/* Enhanced Progress Bar Animation */
+.candidatos .parcial .percentagem {
+  -webkit-animation-duration: 2.5s !important;
+  animation-duration: 2.5s !important;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Skill Tags Hover Effect */
+.mh-about-tag ul li span {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.mh-about-tag ul li span:hover {
+  background-color: #0bceaf !important;
+  color: #fff;
+  border-color: #0bceaf;
+  -webkit-box-shadow: 0 4px 15px rgba(11, 206, 175, 0.3);
+  -moz-box-shadow: 0 4px 15px rgba(11, 206, 175, 0.3);
+  box-shadow: 0 4px 15px rgba(11, 206, 175, 0.3);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+/* Professional Skills Circle Animation Enhancement */
+.mh-professional-progress li {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.mh-professional-progress li:hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+/* Enhanced Portfolio Image Hover */
+.mh-project-gallery .grid-item figure img {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.mh-project-gallery .grid-item:hover figure img {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* Smooth Portfolio Figure Transitions */
+.mh-project-gallery .grid-item figure {
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mh-project-gallery .grid-item:hover figure {
+  -webkit-box-shadow: 0 15px 40px rgba(11, 206, 175, 0.2);
+  -moz-box-shadow: 0 15px 40px rgba(11, 206, 175, 0.2);
+  box-shadow: 0 15px 40px rgba(11, 206, 175, 0.2);
+}
+
+/* Experience Item Hover Effect */
+.mh-work-item, .mh-education-item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.mh-work-item:hover, .mh-education-item:hover {
+  -webkit-transform: translateX(-5px);
+  -moz-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  -o-transform: translateX(-5px);
+  transform: translateX(-5px);
+  border-left: 4px solid #0bceaf;
+  padding-left: 26px;
+}
+
+/* Button Animation Enhancement */
+.btn {
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 8px 20px rgba(11, 206, 175, 0.3);
+  -moz-box-shadow: 0 8px 20px rgba(11, 206, 175, 0.3);
+  box-shadow: 0 8px 20px rgba(11, 206, 175, 0.3);
+}
+
+/* Service Item Animation */
+.mh-service-item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.mh-service-item:hover {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.mh-service-item .fa {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.mh-service-item:hover .fa {
+  -webkit-transform: scale(1.2) rotate(10deg);
+  -moz-transform: scale(1.2) rotate(10deg);
+  -ms-transform: scale(1.2) rotate(10deg);
+  -o-transform: scale(1.2) rotate(10deg);
+  transform: scale(1.2) rotate(10deg);
+  color: #fff;
+}
+
 /*# sourceMappingURL=styles.css.map */

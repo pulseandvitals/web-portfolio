@@ -1,5 +1,27 @@
 window.PORTFOLIO_DATA = [
   {
+    "title": "AE POS App",
+    "stack": "Laravel · Vue.js · Multi-tenancy",
+    "desc": "Multi-tenant POS platform (live at hjklcore.com) with an owner dashboard, audit logs and sales reporting per business.",
+    "images": [
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161103.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161142.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161158.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161220.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161249.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161305.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161318.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161335.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161350.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161404.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-06%20161912.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/Screenshot%202026-08-12%20185823.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/hjklcore.com_.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/hjklcore.com_owner_audit-logs.png",
+      "assets/Aeron%20Portfolios/AE%20POS%20App%20(Multi%20Tenant)/hjklcore.com_owner_reports_sales.png"
+    ]
+  },
+  {
     "title": "Client Projects",
     "stack": "Laravel · Vue.js · InertiaJS",
     "desc": "A mix of freelance and agency client builds using Laravel with Vue and InertiaJS.",
@@ -21,6 +43,25 @@ window.PORTFOLIO_DATA = [
       "assets/Aeron%20Portfolios/Client%20Projects%20(Laravel%20VueJS%20%2B%20InertiaJS)/Screenshot%202025-02-22%20123149.png",
       "assets/Aeron%20Portfolios/Client%20Projects%20(Laravel%20VueJS%20%2B%20InertiaJS)/Screenshot%202025-02-22%20124341.png",
       "assets/Aeron%20Portfolios/Client%20Projects%20(Laravel%20VueJS%20%2B%20InertiaJS)/Screenshot%202025-02-22%20130901.png"
+    ]
+  },
+  {
+    "title": "InsurApp",
+    "stack": "Laravel · Vue.js · InertiaJS",
+    "desc": "Vehicle (CTPL) insurance platform (live at siciproducersctpl.com) covering motor risk assessment, policy issuance and a producer wallet.",
+    "images": [
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/Screenshot%202026-08-13%20153229.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/Screenshot%202026-08-13%20153245.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/Screenshot%202026-08-13%20153302.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/Screenshot%202026-08-13%20153344.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/Screenshot%202026-08-13%20153500.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/Screenshot%202026-08-13%20153554.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/Screenshot%202026-08-13%20153701.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/siciproducersctpl.com_motor_risks.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/siciproducersctpl.com_motor_risks_8_pre_flight.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/siciproducersctpl.com_motor_risks_new.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/siciproducersctpl.com_policies_1.png",
+      "assets/Aeron%20Portfolios/InsurApp%20(Vehicle%20Insurance%20App)/siciproducersctpl.com_producers_wallet.png"
     ]
   },
   {
@@ -64,6 +105,16 @@ window.PORTFOLIO_DATA = [
       "assets/Aeron%20Portfolios/Orient%20Glass%20Quotation%20App%20(Laravel%20Vue%2B%20InertiaJS)/Screenshot%202025-03-26%20091439.png",
       "assets/Aeron%20Portfolios/Orient%20Glass%20Quotation%20App%20(Laravel%20Vue%2B%20InertiaJS)/Screenshot%202025-03-26%20091459.png",
       "assets/Aeron%20Portfolios/Orient%20Glass%20Quotation%20App%20(Laravel%20Vue%2B%20InertiaJS)/Screenshot%202025-03-26%20091518.png"
+    ]
+  },
+  {
+    "title": "Resumatik",
+    "stack": "Laravel · Vue.js · PDF Generation",
+    "desc": "Online CV/resume builder (live at resumatik.xyz) for creating and exporting polished resumes.",
+    "images": [
+      "assets/Aeron%20Portfolios/Resumatik%20(CV%20Maker)/Screenshot%202026-08-13%20153051.png",
+      "assets/Aeron%20Portfolios/Resumatik%20(CV%20Maker)/Screenshot%202026-08-13%20153108.png",
+      "assets/Aeron%20Portfolios/Resumatik%20(CV%20Maker)/resumatik.xyz_.png"
     ]
   },
   {

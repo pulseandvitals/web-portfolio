@@ -22,7 +22,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="assets/css/redesign.css" />
+        <link rel="stylesheet" href="assets/css/dashboard.css" />
 
         <script>
             ;(function () {
@@ -35,651 +35,364 @@
             })()
         </script>
     </head>
-    <body id="top">
-        <!-- ================= NAV ================= -->
-        <header class="nav">
-            <div class="container">
-                <a href="#top" class="nav-brand">Aeron <span>Salcedo</span></a>
+    <body>
+        <div class="app-shell">
+            <!-- ================= SIDEBAR ================= -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-brand">
+                    <div class="brand-mark">AE</div>
+                    <div class="brand-info">
+                        <div class="brand-name">Aeron Salcedo</div>
+                        <div class="brand-role">Full Stack Developer</div>
+                        <div class="brand-status"><span class="status-dot"></span> Available for opportunities</div>
+                    </div>
+                </div>
 
-                <nav class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#work">Work</a>
-                    <a href="#contact">Contact</a>
+                <div class="sidebar-nav-label">Navigate</div>
+                <nav class="sidebar-nav">
+                    <button type="button" class="nav-item" data-nav="overview" title="Overview (1)">
+                        <span class="nav-item-icon"><i class="fa fa-dashboard" aria-hidden="true"></i></span>
+                        <span class="nav-item-label">Overview</span>
+                        <span class="nav-item-index">01</span>
+                    </button>
+                    <button type="button" class="nav-item" data-nav="about" title="About (2)">
+                        <span class="nav-item-icon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                        <span class="nav-item-label">About</span>
+                        <span class="nav-item-index">02</span>
+                    </button>
+                    <button type="button" class="nav-item" data-nav="skills" title="Skills (3)">
+                        <span class="nav-item-icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                        <span class="nav-item-label">Skills</span>
+                        <span class="nav-item-index">03</span>
+                    </button>
+                    <button type="button" class="nav-item" data-nav="projects" title="Projects (4)">
+                        <span class="nav-item-icon"><i class="fa fa-folder-open" aria-hidden="true"></i></span>
+                        <span class="nav-item-label">Projects</span>
+                        <span class="nav-item-index">04</span>
+                    </button>
+                    <button type="button" class="nav-item" data-nav="work" title="Work (5)">
+                        <span class="nav-item-icon"><i class="fa fa-picture-o" aria-hidden="true"></i></span>
+                        <span class="nav-item-label">Work</span>
+                        <span class="nav-item-index">05</span>
+                    </button>
+                    <button type="button" class="nav-item" data-nav="experience" title="Experience (6)">
+                        <span class="nav-item-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+                        <span class="nav-item-label">Experience</span>
+                        <span class="nav-item-index">06</span>
+                    </button>
+                    <button type="button" class="nav-item" data-nav="services" title="Services (7)">
+                        <span class="nav-item-icon"><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span class="nav-item-label">Services</span>
+                        <span class="nav-item-index">07</span>
+                    </button>
+                    <button type="button" class="nav-item" data-nav="contact" title="Contact (8)">
+                        <span class="nav-item-icon"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+                        <span class="nav-item-label">Contact</span>
+                        <span class="nav-item-index">08</span>
+                    </button>
                 </nav>
 
-                <div class="nav-actions">
-                    <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle light and dark theme">
-                        <i class="fa fa-moon-o theme-icon-dark" aria-hidden="true"></i>
-                        <i class="fa fa-sun-o theme-icon-light" aria-hidden="true"></i>
-                    </button>
-                    <button
-                        id="nav-toggle"
-                        class="icon-btn nav-toggle"
-                        type="button"
-                        aria-label="Toggle menu"
-                        aria-controls="nav-mobile-panel"
-                    >
-                        <i class="fa fa-bars" aria-hidden="true"></i>
+                <button type="button" class="sidebar-cta" data-goto="contact">
+                    Let's Work Together <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+
+                <div class="sidebar-footer">
+                    <div class="sidebar-socials">
+                        <a class="icon-btn" href="https://github.com/pulseandvitals/" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a class="icon-btn" href="https://www.facebook.com/profile.php?id=61590846028616" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a class="icon-btn" href="mailto:robertaeronsalcedo@gmail.com" aria-label="Email" title="Email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                    </div>
+                    <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle light and dark theme" title="Toggle theme">
+                        <i class="fa fa-moon-o" aria-hidden="true"></i>
                     </button>
                 </div>
-            </div>
-        </header>
+            </aside>
 
-        <div class="nav-mobile-panel" id="nav-mobile-panel">
-            <div class="container">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#work">Work</a>
-                <a href="#contact">Contact</a>
+            <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+            <!-- ================= MAIN ================= -->
+            <div class="app-main">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <button type="button" class="icon-btn drawer-toggle" id="drawer-toggle" aria-label="Open menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                        <span class="breadcrumb" id="breadcrumb">Dashboard <i class="fa fa-angle-right" aria-hidden="true"></i> <strong>Overview</strong></span>
+                    </div>
+                    <div class="topbar-right">
+                        <span class="topbar-clock" id="topbar-clock"></span>
+                        <a href="assets/cv/Aeron_Latest_Resume.pdf" class="btn btn-solid btn-sm" download>
+                            <i class="fa fa-download" aria-hidden="true"></i> Download CV
+                        </a>
+                    </div>
+                </header>
+
+                <main class="content">
+
+                    <!-- ================= OVERVIEW ================= -->
+                    <section class="view" data-view="overview">
+                        <div class="card hero-panel">
+                            <div class="hero-photo"><img src="assets/images/my_image.jpg" alt="Robert Aeron Salcedo" /></div>
+                            <div>
+                                <span class="hero-eyebrow">Hi, I'm Robert Aeron Salcedo</span>
+                                <h1>Full Stack Web Developer</h1>
+                                <p class="hero-role">I build modern web applications, business systems, e-commerce experiences, and digital products using Laravel, Vue, and modern web technologies.</p>
+                                <div class="hero-actions">
+                                    <button type="button" class="btn btn-solid" data-goto="projects">View My Work</button>
+                                    <button type="button" class="btn btn-ghost" data-goto="contact">Hire Me</button>
+                                    <a href="https://business-page-ten-delta.vercel.app" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa fa-external-link" aria-hidden="true"></i> Visit My Business</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-grid">
+                            <div class="card stat-card">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <div class="stat-value">8+ Years</div>
+                                <div class="stat-label">Experience</div>
+                            </div>
+                            <div class="card stat-card">
+                                <i class="fa fa-cubes" aria-hidden="true"></i>
+                                <div class="stat-value">Full Stack</div>
+                                <div class="stat-label">Development</div>
+                            </div>
+                            <div class="card stat-card">
+                                <i class="fa fa-sitemap" aria-hidden="true"></i>
+                                <div class="stat-value">Laravel + Vue</div>
+                                <div class="stat-label">Specialist</div>
+                            </div>
+                            <div class="card stat-card">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <div class="stat-value">Remote Ready</div>
+                                <div class="stat-label">Availability</div>
+                            </div>
+                        </div>
+
+                        <div class="overview-grid">
+                            <div class="card">
+                                <div class="panel-title">Featured projects <button type="button" class="link-more" data-goto="projects">View all <i class="fa fa-angle-right" aria-hidden="true"></i></button></div>
+                                <div id="overview-projects"></div>
+                            </div>
+                            <div class="card status-panel">
+                                <div class="panel-title">Developer status</div>
+                                <div class="status-available"><span class="status-dot"></span> Available for new opportunities</div>
+                                <div class="info-row"><span class="info-label">Primary stack</span><span class="info-value">Laravel · Vue · Inertia</span></div>
+                                <div class="info-row"><span class="info-label">Specialization</span><span class="info-value">Web Apps · Business Systems · E-commerce</span></div>
+                                <div class="info-row"><span class="info-label">Experience</span><span class="info-value">8+ Years</span></div>
+                            </div>
+                        </div>
+
+                        <div class="panel-title" style="margin-top:16px;">What I build</div>
+                        <div class="services-grid" id="what-i-build-mount"></div>
+                    </section>
+
+                    <!-- ================= ABOUT ================= -->
+                    <section class="view" data-view="about">
+                        <div class="view-head">
+                            <span class="view-kicker">Profile</span>
+                            <h2 class="view-title">Background &amp; specialization</h2>
+                            <p class="view-lede">Who I am, what I focus on, and how I like to work.</p>
+                        </div>
+
+                        <div class="about-grid">
+                            <div class="card about-bio">
+                                <p>I'm a web developer based in Davao City, Philippines, focused on building full-stack applications end to end — from database and API design to the interfaces people actually use.</p>
+                                <p>Most of my work is built on Laravel and Vue.js, spanning client projects, government systems, e-commerce and internal tools, plus a handful of personal products I maintain in production.</p>
+                                <p>I specialize in multi-tenant architectures, payment gateway integrations, and turning ambiguous requirements into systems that hold up under real usage.</p>
+                            </div>
+
+                            <div class="about-side">
+                                <div class="card">
+                                    <div class="panel-title">Snapshot</div>
+                                    <div class="info-row"><span class="info-label">Location</span><span class="info-value">Davao City, PH</span></div>
+                                    <div class="info-row"><span class="info-label">Experience</span><span class="info-value">8+ years</span></div>
+                                    <div class="info-row"><span class="info-label">Projects delivered</span><span class="info-value">20+</span></div>
+                                    <div class="info-row"><span class="info-label">Companies &amp; clients</span><span class="info-value">10+</span></div>
+                                    <div class="info-row"><span class="info-label">Work preference</span><span class="info-value">Remote / Full-time / Contract</span></div>
+                                </div>
+                                <div class="card">
+                                    <div class="panel-title">Core strengths</div>
+                                    <ul class="strength-list">
+                                        <li>Full-stack ownership — DB to UI</li>
+                                        <li>Multi-tenancy &amp; RBAC architecture</li>
+                                        <li>Payment gateway integration (PayMongo, Cashier)</li>
+                                        <li>AI-assisted development workflows</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ================= SKILLS ================= -->
+                    <section class="view" data-view="skills">
+                        <div class="view-head">
+                            <span class="view-kicker">Stack</span>
+                            <h2 class="view-title">Technical skills</h2>
+                            <p class="view-lede">Technologies I use to design, build and ship full-stack applications.</p>
+                        </div>
+
+                        <div class="core-stack-block">
+                            <div class="core-stack-label">Core stack</div>
+                            <div class="core-stack-row" id="core-stack-mount"></div>
+                        </div>
+
+                        <div class="panel-title" style="margin-top:20px;">Also experienced with</div>
+                        <div class="skills-grid" id="skills-mount"></div>
+                    </section>
+
+                    <!-- ================= PROJECTS ================= -->
+                    <section class="view" data-view="projects">
+                        <div class="view-head">
+                            <span class="view-kicker">Portfolio</span>
+                            <h2 class="view-title">Project explorer</h2>
+                            <p class="view-lede">Live products, client builds and systems I've shipped. Click a card for details.</p>
+                        </div>
+                        <div class="filter-row" id="project-filters"></div>
+                        <div class="project-grid" id="project-grid"></div>
+                    </section>
+
+                    <!-- ================= WORK / SELECTED SCREENS ================= -->
+                    <section class="view" data-view="work">
+                        <div class="view-head">
+                            <span class="view-kicker">Selected Work</span>
+                            <h2 class="view-title">Project screens</h2>
+                            <p class="view-lede">A closer look at interfaces I've designed and built across client and personal projects.</p>
+                        </div>
+                        <div class="gallery-list" id="portfolio-galleries"></div>
+                    </section>
+
+                    <!-- ================= EXPERIENCE ================= -->
+                    <section class="view" data-view="experience">
+                        <div class="view-head">
+                            <span class="view-kicker">Background</span>
+                            <h2 class="view-title">Education &amp; work history</h2>
+                            <p class="view-lede">Where I studied and the teams I've built software with since 2019. Click a role to expand.</p>
+                        </div>
+
+                        <div class="exp-section-label">Education</div>
+                        <div class="edu-grid" id="education-mount"></div>
+
+                        <div class="exp-section-label">Work experience</div>
+                        <div class="timeline" id="experience-mount"></div>
+                    </section>
+
+                    <!-- ================= SERVICES ================= -->
+                    <section class="view" data-view="services">
+                        <div class="view-head">
+                            <span class="view-kicker">Offering</span>
+                            <h2 class="view-title">What I can provide</h2>
+                            <p class="view-lede">Ways I can help, whether you're hiring or scoping a project.</p>
+                        </div>
+                        <div class="services-grid" id="services-mount"></div>
+                    </section>
+
+                    <!-- ================= CONTACT ================= -->
+                    <section class="view" data-view="contact">
+                        <div class="view-head">
+                            <span class="view-kicker">Reach out</span>
+                            <h2 class="view-title">Have a project in mind?</h2>
+                            <p class="view-lede">Let's build something useful, scalable, and well-designed.</p>
+                        </div>
+
+                        <div class="card contact-cta-panel">
+                            <div class="status-available"><span class="status-dot"></span> Available for remote opportunities</div>
+                            <div class="hero-actions" style="margin-top:14px;">
+                                <a href="mailto:robertaeronsalcedo@gmail.com" class="btn btn-solid"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email Me</a>
+                                <button type="button" class="btn btn-ghost" id="scroll-to-form"><i class="fa fa-arrow-right" aria-hidden="true"></i> Let's Work Together</button>
+                            </div>
+                        </div>
+
+                        <div class="contact-grid">
+                            <div class="card contact-info-list">
+                                <div class="contact-info-row">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <div><div class="ci-label">Email</div><a class="ci-value" href="mailto:robertaeronsalcedo@gmail.com">robertaeronsalcedo@gmail.com</a></div>
+                                </div>
+                                <div class="contact-info-row">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <div><div class="ci-label">Phone</div><a class="ci-value" href="tel:+639454231298">+63 945 4231 298</a></div>
+                                </div>
+                                <div class="contact-info-row">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <div><div class="ci-label">Location</div><span class="ci-value">Davao City, Philippines</span></div>
+                                </div>
+                                <div class="contact-info-row">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                    <div><div class="ci-label">Availability</div><span class="ci-value">Open to remote opportunities</span></div>
+                                </div>
+                                <div class="contact-info-row">
+                                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                    <div>
+                                        <div class="ci-label">Social</div>
+                                        <div class="tag-row" style="margin-top:4px;">
+                                            <a class="icon-btn" href="https://github.com/pulseandvitals/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                            <a class="icon-btn" href="https://www.facebook.com/profile.php?id=61590846028616" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form class="card contact-form" id="contact-form">
+                                <div class="panel-title">Start a conversation</div>
+                                <div class="form-row">
+                                    <label for="cf-name">Name</label>
+                                    <input id="cf-name" name="name" type="text" required placeholder="Your name" />
+                                </div>
+                                <div class="form-row">
+                                    <label for="cf-email">Email</label>
+                                    <input id="cf-email" name="email" type="email" required placeholder="you@example.com" />
+                                </div>
+                                <div class="form-row">
+                                    <label for="cf-message">Message</label>
+                                    <textarea id="cf-message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-solid btn-block"><i class="fa fa-paper-plane" aria-hidden="true"></i> Start a conversation</button>
+                            </form>
+                        </div>
+                    </section>
+
+                </main>
             </div>
         </div>
 
-        <!-- ================= HERO ================= -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-photo">
-                    <img src="assets/images/my_image.jpg" alt="Robert Aeron Salcedo" />
+        <!-- ================= PROJECT MODAL ================= -->
+        <div class="modal-overlay" id="project-modal">
+            <div class="modal-panel">
+                <div class="modal-head">
+                    <h2 id="modal-title"></h2>
+                    <button type="button" class="modal-close" id="modal-close" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+                <div class="modal-type" id="modal-type"></div>
+                <div class="modal-role"><i class="fa fa-user-o" aria-hidden="true"></i> My role: <strong id="modal-role"></strong></div>
+
+                <div class="modal-section">
+                    <div class="modal-section-title">Problem</div>
+                    <p id="modal-problem"></p>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-title">Challenge</div>
+                    <p id="modal-challenge"></p>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-title">Solution</div>
+                    <p id="modal-solution"></p>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-title">Key features</div>
+                    <ul class="modal-features" id="modal-features"></ul>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-title">Technologies</div>
+                    <div class="tag-row" id="modal-tech"></div>
+                </div>
+                <div class="modal-section" id="modal-gallery-section">
+                    <div class="modal-section-title">Screenshots</div>
+                    <div class="modal-gallery" id="modal-gallery"></div>
                 </div>
 
-                <div>
-                    <span class="hero-eyebrow">Hello, I'm</span>
-                    <h1>Robert Aeron Salcedo</h1>
-                    <p class="hero-role">Full-Stack Web Developer — Laravel &amp; Vue.js specialist</p>
-
-                    <ul class="hero-meta">
-                        <li><i class="fa fa-envelope-o"></i> robertaeronsalcedo@gmail.com</li>
-                        <li><i class="fa fa-phone"></i> +63 945 4231 298</li>
-                        <li><i class="fa fa-map-marker"></i> Davao City, Philippines</li>
-                    </ul>
-
-                    <div class="hero-actions">
-                        <a href="assets/cv/Aeron_Latest_Resume.pdf" class="btn btn-solid" download>
-                            <i class="fa fa-download"></i> Download CV
-                        </a>
-                        <a
-                            href="https://business-page-ten-delta.vercel.app"
-                            class="btn btn-ghost"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            <i class="fa fa-briefcase"></i> Business page
-                        </a>
-                    </div>
-
-                    <div class="social-row">
-                        <a
-                            class="icon-btn"
-                            href="https://www.facebook.com/profile.php?id=61590846028616"
-                            target="_blank"
-                            rel="noopener"
-                            aria-label="Facebook"
-                            ><i class="fa fa-facebook"></i
-                        ></a>
-                        <a
-                            class="icon-btn"
-                            href="https://github.com/pulseandvitals/"
-                            target="_blank"
-                            rel="noopener"
-                            aria-label="GitHub"
-                            ><i class="fa fa-github"></i
-                        ></a>
-                    </div>
+                <div class="modal-actions">
+                    <a href="#" target="_blank" rel="noopener" class="btn btn-solid" id="modal-link">Visit live site <i class="fa fa-external-link" aria-hidden="true"></i></a>
                 </div>
             </div>
-        </section>
-
-        <!-- ================= ABOUT + SKILLS ================= -->
-        <section id="about">
-            <div class="container">
-                <span class="section-kicker">About</span>
-                <h2 class="section-title">Background &amp; toolkit</h2>
-                <p class="section-lede">A quick rundown of who I am and the tools I build with day to day.</p>
-
-                <div class="about-grid">
-                    <div class="about-bio reveal">
-                        <p>
-                            I'm a web developer based in Davao City, Philippines, focused on building full-stack
-                            applications end to end — from database and API design to the interfaces people actually
-                            use.
-                        </p>
-                        <p>
-                            Most of my work is built on Laravel and Vue.js, spanning client projects, government
-                            systems, e-commerce and internal tools, plus a handful of personal products I maintain in
-                            production.
-                        </p>
-
-                        <div class="stat-row">
-                            <div>
-                                <span class="stat-num">8+</span>
-                                <span class="stat-label">Years experience</span>
-                            </div>
-                            <div>
-                                <span class="stat-num">20+</span>
-                                <span class="stat-label">Projects delivered</span>
-                            </div>
-                            <div>
-                                <span class="stat-num">10+</span>
-                                <span class="stat-label">Companies &amp; clients</span>
-                            </div>
-                        </div>
-
-                        <ul class="focus-list">
-                            <li>Full-stack web development (Laravel, Vue, InertiaJS)</li>
-                            <li>REST API design &amp; third-party integrations</li>
-                            <li>AI-assisted tooling (OpenAI, Claude, Gemini)</li>
-                            <li>Payment gateway integration (PayMongo, Cashier)</li>
-                        </ul>
-                    </div>
-
-                    <div class="about-skills reveal">
-                        <div class="skill-group">
-                            <div class="skill-group-title">Backend</div>
-                            <div class="tag-row">
-                                <span class="tag">PHP</span>
-                                <span class="tag">Laravel</span>
-                                <span class="tag">Laravel Ecosystem</span>
-                                <span class="tag">Blade</span>
-                                <span class="tag">Livewire</span>
-                                <span class="tag">Laravel Broadcast</span>
-                                <span class="tag">Yii2</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">RESTful API</span>
-                                <span class="tag">SwaggerUI</span>
-                                <span class="tag">Postman</span>
-                                <span class="tag">Webhooks</span>
-                                <span class="tag">Multi-tenancy Architecture</span>
-                                <span class="tag">RBAC &amp; Audit Logging</span>
-                                <span class="tag">PDF Generation</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group">
-                            <div class="skill-group-title">Frontend</div>
-                            <div class="tag-row">
-                                <span class="tag">Vue 2 / 3</span>
-                                <span class="tag">Pinia</span>
-                                <span class="tag">InertiaJS</span>
-                                <span class="tag">ReactJS</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">jQuery</span>
-                                <span class="tag">Tailwind CSS</span>
-                                <span class="tag">Bootstrap CSS</span>
-                                <span class="tag">HTML / CSS</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group">
-                            <div class="skill-group-title">CMS, database &amp; payments</div>
-                            <div class="tag-row">
-                                <span class="tag">WordPress</span>
-                                <span class="tag">WordPress Plugins</span>
-                                <span class="tag">Custom Themes</span>
-                                <span class="tag">WooCommerce</span>
-                                <span class="tag">Shopify</span>
-                                <span class="tag">MySQL</span>
-                                <span class="tag">PostgreSQL</span>
-                                <span class="tag">PayMongo</span>
-                                <span class="tag">Laravel Cashier</span>
-                                <span class="tag">Payment Gateway Integration</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group">
-                            <div class="skill-group-title">Server &amp; DevOps</div>
-                            <div class="tag-row">
-                                <span class="tag">Docker</span>
-                                <span class="tag">Git</span>
-                                <span class="tag">GitHub</span>
-                                <span class="tag">GitLab</span>
-                                <span class="tag">BitBucket</span>
-                                <span class="tag">FTP</span>
-                                <span class="tag">SSH</span>
-                                <span class="tag">CLI</span>
-                                <span class="tag">Hostinger</span>
-                                <span class="tag">cPanel</span>
-                                <span class="tag">Domain / DNS Config</span>
-                                <span class="tag">Cron</span>
-                                <span class="tag">Supervisor</span>
-                                <span class="tag">WAMP</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group">
-                            <div class="skill-group-title">AI experience</div>
-                            <div class="tag-row">
-                                <span class="tag">Claude AI</span>
-                                <span class="tag">Claude MCP</span>
-                                <span class="tag">ChatGPT</span>
-                                <span class="tag">OpenAI</span>
-                                <span class="tag">Gemini</span>
-                                <span class="tag">Gamma AI</span>
-                                <span class="tag">GitHub Copilot</span>
-                                <span class="tag">Perplexity</span>
-                                <span class="tag">Sage Pilot</span>
-                                <span class="tag">DeepSeek</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group">
-                            <div class="skill-group-title">Design &amp; collaboration</div>
-                            <div class="tag-row">
-                                <span class="tag">Canva</span>
-                                <span class="tag">Figma</span>
-                                <span class="tag">Illustrator</span>
-                                <span class="tag">Jira</span>
-                                <span class="tag">Trello</span>
-                                <span class="tag">Slack</span>
-                                <span class="tag">Teams</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group">
-                            <div class="skill-group-title">Working style</div>
-                            <div class="tag-row">
-                                <span class="tag">Communication</span>
-                                <span class="tag">Problem Solving</span>
-                                <span class="tag">Project Management</span>
-                                <span class="tag">Collaboration</span>
-                                <span class="tag">Adaptability</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= EXPERIENCE ================= -->
-        <section id="experience">
-            <div class="container">
-                <span class="section-kicker">Experience</span>
-                <h2 class="section-title">Education &amp; work history</h2>
-                <p class="section-lede">Where I studied and the teams I've built software with since 2019.</p>
-
-                <div class="edu-block">
-                    <div class="exp-col-title">Education</div>
-                    <div class="timeline timeline--grid">
-                        <div class="timeline-item">
-                            <h4>University of Mindanao College</h4>
-                            <span class="org">Davao City</span>
-                            <span class="period">2013 – 2019</span>
-                            <p>Bachelor of Science in Information Technology</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Cabantian National High School</h4>
-                            <span class="org">Davao City</span>
-                            <span class="period">2009 – 2013</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work-block">
-                    <div class="exp-col-title">Work experience</div>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">RCSC Ltd — Remote (US)</span>
-                            <span class="period">Heavy Equipment Rental · Solo Development</span>
-                            <p>
-                                Developed a full-featured heavy equipment rental platform enabling efficient booking,
-                                real-time inventory management and seamless customer interactions, with a responsive
-                                interface optimized across desktop and mobile.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">Vue 3</span>
-                                <span class="tag">InertiaJS</span>
-                                <span class="tag">Tailwind CSS</span>
-                                <span class="tag">Stripe API</span>
-                                <span class="tag">CalendarJS</span>
-                                <span class="tag">ChatGPT</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">GuttVannm Architect — Remote (US)</span>
-                            <span class="period">Solo Development</span>
-                            <p>
-                                Built a scheduling app for architectural laser scan requests — clients see the shortest
-                                technician route on booking, plus full visibility into scan requests and scheduled
-                                appointments.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">Vue 3</span>
-                                <span class="tag">InertiaJS</span>
-                                <span class="tag">Tailwind CSS</span>
-                                <span class="tag">Figma</span>
-                                <span class="tag">ChatGPT</span>
-                                <span class="tag">GitHub Copilot</span>
-                                <span class="tag">Stripe API</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">Wisteria Online &amp; Wasteland MMORPG</span>
-                            <span class="period">Personal Project · Solo Development</span>
-                            <p>
-                                Built modular PvP/PvE systems with real-time polling, pause/resume controls and scalable
-                                event triggers, plus forums, guild tools and event calendars to drive player retention.
-                                Zones, factions and quest lines are inspired by Filipino culture.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">Vue 3</span>
-                                <span class="tag">InertiaJS</span>
-                                <span class="tag">Tailwind CSS</span>
-                                <span class="tag">Canva</span>
-                                <span class="tag">ChatGPT</span>
-                                <span class="tag">GitHub Copilot</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">TITAN Inc.</span>
-                            <span class="period">Full time</span>
-                            <p>
-                                Developed the MSWD system for Makati City Government, with layered security and query
-                                optimization for data accuracy and performance at scale.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">Vue.js</span>
-                                <span class="tag">Bootstrap CSS</span>
-                                <span class="tag">RESTful API</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">VPI Cars Manila</span>
-                            <span class="period">Contractual</span>
-                            <p>
-                                Built a nationwide car rental platform with end-to-end admin and affiliate booking
-                                workflows.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">Vue.js</span>
-                                <span class="tag">Tailwind CSS</span>
-                                <span class="tag">RESTful API</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">Local Client</span>
-                            <span class="period">Project based</span>
-                            <p>
-                                Built a hair-cut scheduling system with multi-tenancy support for multiple business
-                                locations.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">Blade</span>
-                                <span class="tag">Bootstrap CSS</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">Nest18</span>
-                            <span class="period">Project based</span>
-                            <p>
-                                Built OpenAI-assisted header generation for writers, including a family-tree hierarchy
-                                for header labeling.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">Vue.js</span>
-                                <span class="tag">InertiaJS</span>
-                                <span class="tag">Tailwind CSS</span>
-                                <span class="tag">OpenAI</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Backend Developer</h4>
-                            <span class="org">CresCode Inc.</span>
-                            <span class="period">Apr 2023 – Dec 2023</span>
-                            <p>
-                                Developed and refactored REST APIs, migrated legacy Laravel projects to newer versions,
-                                and tested endpoints in SwaggerUI.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">RESTful API</span>
-                                <span class="tag">SwaggerUI</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">FoxComm Ltd</span>
-                            <span class="period">Apr 2021 – Apr 2023</span>
-                            <p>
-                                Built projects with Laravel, Vue and InertiaJS, managed WordPress blogs, and maintained
-                                a single-vendor Shopify store.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">Vue.js</span>
-                                <span class="tag">InertiaJS</span>
-                                <span class="tag">WordPress</span>
-                                <span class="tag">Shopify</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">Artisans Developer</span>
-                            <span class="period">May 2020 – Apr 2021</span>
-                            <p>
-                                Built sites on Laravel, WordPress and Shopify, with UI and graphic design work in Canva.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">WordPress</span>
-                                <span class="tag">Shopify</span>
-                                <span class="tag">Canva</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <h4>Full Stack Web Developer</h4>
-                            <span class="org">Segworks</span>
-                            <span class="period">Mar 2019 – Apr 2020</span>
-                            <p>Maintained databases, refactored queries, and developed new features and fixes.</p>
-                            <div class="tag-row">
-                                <span class="tag">PHP</span>
-                                <span class="tag">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= LIVE PROJECTS ================= -->
-        <section id="projects">
-            <div class="container">
-                <span class="section-kicker">Live Projects</span>
-                <h2 class="section-title">Products in production</h2>
-                <p class="section-lede">Personal projects I've built and deployed that are live and running today.</p>
-
-                <div class="project-grid">
-                    <article class="project-card reveal">
-                        <div class="project-card-top">
-                            <h3>Wisteria Online</h3>
-                            <i class="fa fa-external-link"></i>
-                        </div>
-                        <p>Browser-based MMORPG with persistent player progression and real-time systems.</p>
-                        <div class="tag-row">
-                            <span class="tag">MMORPG</span>
-                            <span class="tag">Game Dev</span>
-                        </div>
-                        <a class="btn btn-ghost btn-sm" href="https://wisteriaonline.com" target="_blank" rel="noopener"
-                            >Visit site</a
-                        >
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-card-top">
-                            <h3>Wasteland MMORPG</h3>
-                            <i class="fa fa-external-link"></i>
-                        </div>
-                        <p>Post-apocalyptic themed browser MMORPG.</p>
-                        <div class="tag-row">
-                            <span class="tag">MMORPG</span>
-                            <span class="tag">Game Dev</span>
-                        </div>
-                        <a
-                            class="btn btn-ghost btn-sm"
-                            href="https://wastelandmmorpg.com"
-                            target="_blank"
-                            rel="noopener"
-                            >Visit site</a
-                        >
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-card-top">
-                            <h3>AeTask</h3>
-                            <i class="fa fa-external-link"></i>
-                        </div>
-                        <p>Kanban-style board and workflow management tool for teams.</p>
-                        <div class="tag-row">
-                            <span class="tag">Productivity</span>
-                            <span class="tag">SaaS</span>
-                        </div>
-                        <a class="btn btn-ghost btn-sm" href="https://aetask.xyz" target="_blank" rel="noopener"
-                            >Visit site</a
-                        >
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-card-top">
-                            <h3>HJKL Core</h3>
-                            <i class="fa fa-external-link"></i>
-                        </div>
-                        <p>
-                            Multi-tenant POS platform with an owner dashboard, audit logs and sales reporting for
-                            multiple businesses.
-                        </p>
-                        <div class="tag-row">
-                            <span class="tag">POS</span>
-                            <span class="tag">Multi-tenant</span>
-                        </div>
-                        <a class="btn btn-ghost btn-sm" href="https://hjklcore.com" target="_blank" rel="noopener"
-                            >Visit site</a
-                        >
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-card-top">
-                            <h3>SICI Producers CTPL</h3>
-                            <i class="fa fa-external-link"></i>
-                        </div>
-                        <p>
-                            Online CTPL insurance issuance platform — motor risk assessment, policy issuance and a
-                            producer wallet.
-                        </p>
-                        <div class="tag-row">
-                            <span class="tag">Insurance</span>
-                            <span class="tag">Fintech</span>
-                        </div>
-                        <a
-                            class="btn btn-ghost btn-sm"
-                            href="https://siciproducersctpl.com"
-                            target="_blank"
-                            rel="noopener"
-                            >Visit site</a
-                        >
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-card-top">
-                            <h3>Resumatik</h3>
-                            <i class="fa fa-external-link"></i>
-                        </div>
-                        <p>Online CV/resume builder for creating and exporting polished, ready-to-send resumes.</p>
-                        <div class="tag-row">
-                            <span class="tag">Resume Builder</span>
-                            <span class="tag">SaaS</span>
-                        </div>
-                        <a class="btn btn-ghost btn-sm" href="https://resumatik.xyz" target="_blank" rel="noopener"
-                            >Visit site</a
-                        >
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= PORTFOLIO / SELECTED WORK ================= -->
-        <section id="work">
-            <div class="container">
-                <span class="section-kicker">Selected Work</span>
-                <h2 class="section-title">Project screens</h2>
-                <p class="section-lede">
-                    A closer look at interfaces I've designed and built across client and personal projects.
-                </p>
-
-                <div class="gallery-list" id="portfolio-galleries"></div>
-            </div>
-        </section>
-
-        <!-- ================= CONTACT ================= -->
-        <section id="contact">
-            <div class="container">
-                <span class="section-kicker">Contact</span>
-                <h2 class="section-title">Let's build something</h2>
-                <p class="section-lede">
-                    Open to full-stack roles and freelance projects — reach out any of these ways.
-                </p>
-
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <i class="fa fa-envelope-o"></i>
-                        <h4>Email</h4>
-                        <a href="mailto:robertaeronsalcedo@gmail.com">robertaeronsalcedo@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa fa-phone"></i>
-                        <h4>Phone</h4>
-                        <a href="tel:+639454231298">+63 945 4231 298</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa fa-map-marker"></i>
-                        <h4>Location</h4>
-                        <span>Davao City, Philippines</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa fa-share-alt"></i>
-                        <h4>Social</h4>
-                        <div class="social-row" style="margin-top: 8px">
-                            <a
-                                class="icon-btn"
-                                href="https://www.facebook.com/profile.php?id=61590846028616"
-                                target="_blank"
-                                rel="noopener"
-                                aria-label="Facebook"
-                                ><i class="fa fa-facebook"></i
-                            ></a>
-                            <a
-                                class="icon-btn"
-                                href="https://github.com/pulseandvitals/"
-                                target="_blank"
-                                rel="noopener"
-                                aria-label="GitHub"
-                                ><i class="fa fa-github"></i
-                            ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="site-footer">
-            <div class="container">
-                <span>© 2026 Robert Aeron Salcedo. All rights reserved.</span>
-                <span>Designed &amp; built by Aeron.</span>
-            </div>
-        </footer>
+        </div>
 
         <!-- ================= LIGHTBOX ================= -->
         <div class="lightbox" id="lightbox">
@@ -695,7 +408,7 @@
         </div>
 
         <script src="assets/js/portfolio-data.js"></script>
-        <script src="assets/js/redesign.js"></script>
+        <script src="assets/js/dashboard-data.js"></script>
+        <script src="assets/js/dashboard.js"></script>
     </body>
 </html>
-

@@ -53,7 +53,6 @@
     document.title = meta.title + ' — Robert Aeron Salcedo';
     closeDrawer();
     document.querySelector('.content').scrollTop = 0;
-    if (name === 'skills') measureSkillCards();
   }
 
   var SECTION_ORDER = ['overview', 'about', 'skills', 'projects', 'work', 'experience', 'services', 'contact'];
@@ -98,81 +97,43 @@
     if (backdrop) backdrop.addEventListener('click', closeDrawer);
   }
 
-  /* ---------- Clock ---------- */
-  function initClock() {
-    var el = document.getElementById('topbar-clock');
-    if (!el) return;
-    function tick() {
-      var now = new Date();
-      var opts = { timeZone: 'Asia/Manila', hour: '2-digit', minute: '2-digit' };
-      el.textContent = 'Davao City, PH · ' + now.toLocaleTimeString('en-US', opts) + ' (GMT+8)';
-    }
-    tick();
-    setInterval(tick, 30000);
-  }
-
   /* ---------- Skills ---------- */
+  /* One panel open at a time; the first starts open. Height animates via
+     CSS grid rows (0fr -> 1fr), so no JS measuring is needed. */
   function renderSkills() {
     var mount = document.getElementById('skills-mount');
     if (!mount) return;
-    mount.innerHTML = DATA.skills.map(function (cat) {
+    mount.innerHTML = DATA.skills.map(function (cat, i) {
+      var open = i === 0;
       return (
-        '<div class="card skill-card">' +
-          '<div class="skill-card-head"><i class="fa ' + cat.icon + '" aria-hidden="true"></i><h3>' + cat.category + '</h3></div>' +
-          '<div class="skill-tags-wrap"><div class="tag-row skill-tags">' +
-            cat.items.map(function (s) { return '<span class="tag">' + s + '</span>'; }).join('') +
-          '</div></div>' +
-          '<button type="button" class="skill-toggle is-inactive">' +
-            '<span class="skill-toggle-label">Show all (' + cat.items.length + ')</span>' +
-            '<i class="fa fa-chevron-down" aria-hidden="true"></i>' +
+        '<div class="acc-item' + (open ? ' is-open' : '') + '">' +
+          '<button type="button" class="acc-head" id="acc-head-' + i + '" aria-expanded="' + open + '" aria-controls="acc-body-' + i + '">' +
+            '<span class="acc-icon"><i class="fa ' + cat.icon + '" aria-hidden="true"></i></span>' +
+            '<span class="acc-title">' + cat.category + '</span>' +
+            '<span class="acc-count">' + cat.items.length + '</span>' +
+            '<i class="fa fa-chevron-down acc-chevron" aria-hidden="true"></i>' +
           '</button>' +
+          '<div class="acc-body" id="acc-body-' + i + '" role="region" aria-labelledby="acc-head-' + i + '">' +
+            '<div class="acc-body-inner"><div class="tag-row">' +
+              cat.items.map(function (s) { return '<span class="tag">' + s + '</span>'; }).join('') +
+            '</div></div>' +
+          '</div>' +
         '</div>'
       );
     }).join('');
-  }
 
-  /* Measures overflow to decide which skill cards need the toggle.
-     Runs lazily once the Skills view is actually visible, since a
-     display:none ancestor reports 0 for scrollHeight/clientHeight.
-     Safe to call repeatedly (e.g. on resize) — the click listener is
-     only ever attached once per card, tracked via data-bound. */
-  function measureSkillCards() {
-    var mount = document.getElementById('skills-mount');
-    if (!mount) return;
-    mount.querySelectorAll('.skill-card').forEach(function (card) {
-      var wrap = card.querySelector('.skill-tags-wrap');
-      if (!wrap.clientHeight) return;
-
-      var tags = card.querySelector('.skill-tags');
-      var toggle = card.querySelector('.skill-toggle');
-      var label = toggle.querySelector('.skill-toggle-label');
-      var total = card.querySelectorAll('.skill-tags .tag').length;
-      var overflows = tags.scrollHeight > wrap.clientHeight + 2;
-
-      toggle.classList.toggle('is-inactive', !overflows);
-      if (!overflows) {
-        card.classList.remove('is-open');
-        label.textContent = 'Show all (' + total + ')';
-      }
-
-      if (!toggle.dataset.bound) {
-        toggle.dataset.bound = '1';
-        toggle.addEventListener('click', function () {
-          var isOpen = card.classList.toggle('is-open');
-          label.textContent = isOpen ? 'Show less' : 'Show all (' + total + ')';
+    mount.querySelectorAll('.acc-item').forEach(function (item) {
+      item.querySelector('.acc-head').addEventListener('click', function () {
+        var willOpen = !item.classList.contains('is-open');
+        mount.querySelectorAll('.acc-item').forEach(function (other) {
+          other.classList.remove('is-open');
+          other.querySelector('.acc-head').setAttribute('aria-expanded', 'false');
         });
-      }
-    });
-  }
-
-  var resizeTimer;
-  function initSkillsResizeCheck() {
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        var view = document.querySelector('.view[data-view="skills"]');
-        if (view && view.classList.contains('is-active')) measureSkillCards();
-      }, 200);
+        if (willOpen) {
+          item.classList.add('is-open');
+          item.querySelector('.acc-head').setAttribute('aria-expanded', 'true');
+        }
+      });
     });
   }
 
@@ -206,13 +167,35 @@
     }).join('');
   }
 
+  /* ---------- Hero skills (Overview) ---------- */
+  function renderHeroSkills() {
+    var mount = document.getElementById('hero-skills');
+    if (!mount) return;
+    mount.innerHTML = DATA.coreStack.map(function (s) {
+      return '<span class="tag">' + s.name + '</span>';
+    }).join('');
+  }
+
   /* ---------- Core stack (Skills) ---------- */
   function renderCoreStack() {
     var mount = document.getElementById('core-stack-mount');
     if (!mount) return;
-    mount.innerHTML = DATA.coreStack.map(function (s) {
-      return '<span class="tag core-tag">' + s + '</span>';
-    }).join('');
+    function tile(s) {
+      return (
+        '<div class="core-tile' + (s.primary ? ' core-tile--primary' : '') + '">' +
+          '<span class="core-tile-icon"><i class="fa ' + s.icon + '" aria-hidden="true"></i></span>' +
+          '<div class="core-tile-text">' +
+            '<div class="core-tile-name">' + s.name + '</div>' +
+            '<div class="core-tile-role">' + s.role + '</div>' +
+          '</div>' +
+        '</div>'
+      );
+    }
+    var primary = DATA.coreStack.filter(function (s) { return s.primary; });
+    var rest = DATA.coreStack.filter(function (s) { return !s.primary; });
+    mount.innerHTML =
+      '<div class="core-primary">' + primary.map(tile).join('') + '</div>' +
+      '<div class="core-rest">' + rest.map(tile).join('') + '</div>';
   }
 
   /* ---------- Experience ---------- */
@@ -231,30 +214,34 @@
         );
       }).join('');
     }
-    if (workMount) {
-      workMount.innerHTML = DATA.experience.map(function (job, i) {
-        return (
-          '<div class="card timeline-card" data-idx="' + i + '">' +
-            '<div class="timeline-card-head">' +
-              '<div class="timeline-card-head-main">' +
-                '<h4>' + job.role + '</h4>' +
-                '<span class="org">' + job.org + '</span>' +
-                '<span class="period">' + job.period + '</span>' +
-              '</div>' +
-              '<span class="timeline-toggle"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>' +
-            '</div>' +
-            '<div class="timeline-body">' +
-              '<p>' + job.desc + '</p>' +
-              '<div class="tag-row">' + job.tags.map(function (t) { return '<span class="tag">' + t + '</span>'; }).join('') + '</div>' +
-            '</div>' +
-          '</div>'
-        );
-      }).join('');
+    renderTimeline(workMount, DATA.experience);
+    renderTimeline(document.getElementById('support-mount'), DATA.support);
+  }
 
-      workMount.querySelectorAll('.timeline-card').forEach(function (card) {
-        card.addEventListener('click', function () { card.classList.toggle('is-open'); });
-      });
-    }
+  function renderTimeline(mount, list) {
+    if (!mount || !list) return;
+    mount.innerHTML = list.map(function (job) {
+      var meta = [job.role, job.period].filter(Boolean).join(' · ');
+      return (
+        '<div class="card timeline-card">' +
+          '<div class="timeline-card-head">' +
+            '<div class="timeline-card-head-main">' +
+              '<h4>' + job.org + '</h4>' +
+              '<span class="org">' + meta + '</span>' +
+            '</div>' +
+            '<span class="timeline-toggle"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>' +
+          '</div>' +
+          '<div class="timeline-body">' +
+            '<p>' + job.desc + '</p>' +
+            '<div class="tag-row">' + job.tags.map(function (t) { return '<span class="tag">' + t + '</span>'; }).join('') + '</div>' +
+          '</div>' +
+        '</div>'
+      );
+    }).join('');
+
+    mount.querySelectorAll('.timeline-card').forEach(function (card) {
+      card.addEventListener('click', function () { card.classList.toggle('is-open'); });
+    });
   }
 
   /* ---------- Projects ---------- */
@@ -321,46 +308,149 @@
     }).join('');
   }
 
-  /* ---------- Selected work galleries ---------- */
+  /* ---------- Work showcase (slider per project) ---------- */
   var EXCLUDED_GALLERIES = ['WordPress Projects'];
-  var THUMB_LIMIT = 4;
 
-  function renderPortfolioGalleries() {
-    var mount = document.getElementById('portfolio-galleries');
+  function workSlug(title) {
+    return 'work-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  }
+
+  function workCardHtml(cat) {
+    var n = cat.images.length;
+    var segs = cat.images.map(function (s, i) {
+      return '<button type="button" class="work-seg" data-i="' + i + '" aria-label="Show screenshot ' + (i + 1) + '"></button>';
+    }).join('');
+    return (
+      '<article class="card work-card" id="' + workSlug(cat.title) + '">' +
+        '<div class="work-slider" tabindex="0" role="group" aria-roledescription="carousel" aria-label="' + cat.title + ' screenshots">' +
+          '<div class="work-stage">' +
+            '<img class="work-img is-loading" alt="' + cat.title + ' screenshot" draggable="false">' +
+            '<button type="button" class="work-nav work-prev" aria-label="Previous screenshot"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>' +
+            '<button type="button" class="work-nav work-next" aria-label="Next screenshot"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>' +
+            '<button type="button" class="work-expand" aria-label="View full size"><i class="fa fa-expand" aria-hidden="true"></i></button>' +
+            '<span class="work-counter" aria-live="polite">1 / ' + n + '</span>' +
+          '</div>' +
+          '<div class="work-progress">' + segs + '</div>' +
+        '</div>' +
+        '<div class="work-info">' +
+          '<div class="work-info-main">' +
+            '<div class="work-kind">' + cat.kind + '</div>' +
+            '<h3>' + cat.title + '</h3>' +
+            '<p class="work-stack">' + cat.stack + '</p>' +
+            '<p class="work-desc">' + cat.desc + '</p>' +
+          '</div>' +
+          '<div class="work-info-side">' +
+            '<ul class="work-points">' + cat.highlights.map(function (h) { return '<li>' + h + '</li>'; }).join('') + '</ul>' +
+            '<div class="work-foot">' +
+              '<span class="work-role">' + cat.role + ' · ' + n + ' screens</span>' +
+              (cat.link ? '<a class="btn btn-ghost btn-sm" href="' + cat.link + '" target="_blank" rel="noopener">Visit live site <i class="fa fa-external-link" aria-hidden="true"></i></a>' : '') +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</article>'
+    );
+  }
+
+  function initWorkSlider(card, cat) {
+    var n = cat.images.length;
+    var idx = 0;
+    var token = 0;
+    var started = false;
+    var slider = card.querySelector('.work-slider');
+    var img = card.querySelector('.work-img');
+    var counter = card.querySelector('.work-counter');
+    var segs = card.querySelectorAll('.work-seg');
+    var stage = card.querySelector('.work-stage');
+
+    function go(i) {
+      idx = (i + n) % n;
+      var mine = ++token;
+      var src = cat.images[idx];
+      img.classList.add('is-loading');
+      var pre = new Image();
+      pre.onload = pre.onerror = function () {
+        if (mine !== token) return;
+        img.src = src;
+        img.alt = cat.title + ' screenshot ' + (idx + 1) + ' of ' + n;
+        img.classList.remove('is-loading');
+        new Image().src = cat.images[(idx + 1) % n];
+      };
+      pre.src = src;
+      counter.textContent = (idx + 1) + ' / ' + n;
+      segs.forEach(function (s, k) {
+        s.classList.toggle('is-active', k === idx);
+        s.setAttribute('aria-current', k === idx ? 'true' : 'false');
+      });
+    }
+
+    card.startSlider = function () { if (!started) { started = true; go(0); } };
+
+    card.querySelector('.work-prev').addEventListener('click', function () { go(idx - 1); });
+    card.querySelector('.work-next').addEventListener('click', function () { go(idx + 1); });
+    segs.forEach(function (s) {
+      s.addEventListener('click', function () { go(parseInt(s.getAttribute('data-i'), 10)); });
+    });
+    card.querySelector('.work-expand').addEventListener('click', function () { openLightbox(cat.images, idx); });
+
+    slider.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(idx - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(idx + 1); }
+    });
+
+    /* swipe on touch/pen; a swipe must not also count as a click that opens the lightbox */
+    var startX = null;
+    var swiped = false;
+    stage.addEventListener('pointerdown', function (e) { startX = e.clientX; swiped = false; });
+    stage.addEventListener('pointerup', function (e) {
+      if (startX === null) return;
+      var dx = e.clientX - startX;
+      startX = null;
+      if (e.pointerType !== 'mouse' && Math.abs(dx) > 40) {
+        swiped = true;
+        go(dx < 0 ? idx + 1 : idx - 1);
+      }
+    });
+    img.addEventListener('click', function () {
+      if (swiped) { swiped = false; return; }
+      openLightbox(cat.images, idx);
+    });
+  }
+
+  function renderWorkShowcase() {
+    var mount = document.getElementById('work-list');
     if (!mount) return;
     var data = GALLERIES.filter(function (cat) { return EXCLUDED_GALLERIES.indexOf(cat.title) === -1; });
 
-    mount.innerHTML = data.map(function (cat, catIndex) {
-      var thumbs = cat.images.slice(0, THUMB_LIMIT).map(function (src, i) {
-        var isLast = i === THUMB_LIMIT - 1 && cat.images.length > THUMB_LIMIT;
-        var remaining = cat.images.length - THUMB_LIMIT;
-        return (
-          '<button type="button" data-cat="' + catIndex + '" data-idx="' + i + '" aria-label="Open image ' + (i + 1) + '">' +
-            '<img src="' + src + '" alt="' + cat.title + ' screenshot ' + (i + 1) + '" loading="lazy">' +
-            (isLast ? '<span class="thumb-more">+' + remaining + '</span>' : '') +
-          '</button>'
-        );
+    var chips = document.getElementById('work-chips');
+    if (chips) {
+      chips.innerHTML = data.map(function (cat) {
+        return '<button type="button" class="filter-chip" data-target="' + workSlug(cat.title) + '">' + cat.title + '</button>';
       }).join('');
-
-      return (
-        '<article class="card gallery-card">' +
-          '<div class="gallery-card-head">' +
-            '<div><h3>' + cat.title + '</h3><p>' + cat.stack + '</p></div>' +
-            '<span class="tag">' + cat.images.length + ' shots</span>' +
-          '</div>' +
-          '<p class="gallery-card-desc">' + cat.desc + '</p>' +
-          '<div class="gallery-thumbs">' + thumbs + '</div>' +
-        '</article>'
-      );
-    }).join('');
-
-    mount.querySelectorAll('.gallery-thumbs button').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var catIndex = parseInt(btn.getAttribute('data-cat'), 10);
-        var idx = parseInt(btn.getAttribute('data-idx'), 10);
-        openLightbox(data[catIndex].images, idx);
+      chips.querySelectorAll('.filter-chip').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var target = document.getElementById(chip.getAttribute('data-target'));
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
       });
-    });
+    }
+
+    mount.innerHTML = data.map(workCardHtml).join('');
+    var cards = mount.querySelectorAll('.work-card');
+    cards.forEach(function (card, i) { initWorkSlider(card, data[i]); });
+
+    /* load each slider's first image only when its card nears the viewport */
+    if (!('IntersectionObserver' in window)) {
+      cards.forEach(function (card) { card.startSlider(); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.startSlider();
+        observer.unobserve(entry.target);
+      });
+    }, { root: document.querySelector('.content'), rootMargin: '400px 0px' });
+    cards.forEach(function (card) { observer.observe(card); });
   }
 
   /* ---------- Lightbox ---------- */
@@ -486,21 +576,20 @@
   document.addEventListener('DOMContentLoaded', function () {
     initTheme();
     initDrawer();
-    initClock();
     renderSkills();
     renderCoreStack();
+    renderHeroSkills();
     renderServices();
     renderWhatIBuild();
     renderExperience();
     renderProjectFilters();
     renderProjectGrid();
     renderOverviewProjects();
-    renderPortfolioGalleries();
+    renderWorkShowcase();
     initLightbox();
     initModal();
     initContactForm();
     initRouting();
     initKeyboardNav();
-    initSkillsResizeCheck();
   });
 })();

@@ -49,48 +49,32 @@ window.DASHBOARD_DATA = (function () {
     }
   ];
 
-  var coreStack = ['Laravel', 'Vue.js', 'Inertia.js', 'PHP', 'JavaScript', 'Tailwind CSS', 'MySQL'];
+  var coreStack = [
+    { name: 'Laravel', role: 'Backend framework', icon: 'fa-server', primary: true },
+    { name: 'Vue.js', role: 'Frontend framework', icon: 'fa-window-restore', primary: true },
+    { name: 'Inertia.js', role: 'Laravel + Vue bridge', icon: 'fa-plug' },
+    { name: 'PHP', role: 'Language', icon: 'fa-code' },
+    { name: 'JavaScript', role: 'Language', icon: 'fa-terminal' },
+    { name: 'Tailwind CSS', role: 'Styling', icon: 'fa-paint-brush' },
+    { name: 'MySQL', role: 'Database', icon: 'fa-database' }
+  ];
 
   var whatIBuild = [
-    { icon: 'fa-window-restore', title: 'Web Applications', desc: 'Scalable applications built around real business requirements.' },
-    { icon: 'fa-sitemap', title: 'Business Systems', desc: 'POS, booking, rental, insurance, CRM-style and custom systems.' },
-    { icon: 'fa-shopping-cart', title: 'E-commerce', desc: 'Shopify, WordPress and custom e-commerce experiences.' },
-    { icon: 'fa-cubes', title: 'SaaS', desc: 'Modern web applications and subscription-based platforms.' },
-    { icon: 'fa-paint-brush', title: 'UI/UX Implementation', desc: 'Turning designs into polished, responsive interfaces.' },
-    { icon: 'fa-gamepad', title: 'Game Development', desc: 'Experience building game-related personal projects.' }
+    { icon: 'fa-window-restore', title: 'Web Applications', desc: 'Scalable apps built around real business needs.' },
+    { icon: 'fa-sitemap', title: 'Business Systems', desc: 'POS, booking, rental, insurance and custom systems.' },
+    { icon: 'fa-shopping-cart', title: 'E-commerce', desc: 'Shopify, WordPress and custom storefronts.' },
+    { icon: 'fa-cubes', title: 'SaaS', desc: 'Subscription-based web platforms.' },
+    { icon: 'fa-paint-brush', title: 'UI/UX Implementation', desc: 'Designs turned into polished, responsive interfaces.' },
+    { icon: 'fa-gamepad', title: 'Game Development', desc: 'Browser games built as personal projects.' }
   ];
 
   var services = [
-    {
-      icon: 'fa-cubes',
-      title: 'Full Stack Development',
-      desc: 'Modern web applications using Laravel and Vue, from database design through to a shipped interface.'
-    },
-    {
-      icon: 'fa-window-restore',
-      title: 'Frontend Development',
-      desc: 'Responsive, interactive interfaces with Vue, JavaScript, and Tailwind CSS.'
-    },
-    {
-      icon: 'fa-server',
-      title: 'Backend Development',
-      desc: 'Laravel APIs, database architecture, authentication, integrations, and business logic.'
-    },
-    {
-      icon: 'fa-wordpress',
-      title: 'Shopify & WordPress',
-      desc: 'Customizations, websites, themes, integrations, and performance optimization.'
-    },
-    {
-      icon: 'fa-paint-brush',
-      title: 'UI/UX Implementation',
-      desc: 'Turning designs into polished, responsive interfaces that hold up in production.'
-    },
-    {
-      icon: 'fa-sitemap',
-      title: 'Custom Business Systems',
-      desc: 'Booking systems, POS systems, dashboards, CRM-style tools, and other custom applications.'
-    }
+    { icon: 'fa-cubes', title: 'Full Stack Development', desc: 'Complete web apps, frontend to backend.' },
+    { icon: 'fa-server', title: 'Laravel Development', desc: 'APIs, authentication, database design and integrations.' },
+    { icon: 'fa-window-restore', title: 'Vue Development', desc: 'Interactive interfaces with Vue, Inertia and Tailwind.' },
+    { icon: 'fa-sitemap', title: 'Business Systems', desc: 'POS, booking, rental, insurance and CRM-style systems.' },
+    { icon: 'fa-wordpress', title: 'Shopify & WordPress', desc: 'Custom sites, themes, integrations and optimization.' },
+    { icon: 'fa-paint-brush', title: 'UI/UX Implementation', desc: 'Designs turned into responsive, production-ready interfaces.' }
   ];
 
   var projectTypes = ['All', 'Web Apps', 'E-commerce', 'SaaS', 'Games', 'Business Systems'];
@@ -100,13 +84,13 @@ window.DASHBOARD_DATA = (function () {
       id: 'wisteria',
       title: 'Wisteria Online',
       type: 'Games',
-      tagline: 'Browser-based MMORPG with persistent player progression.',
+      tagline: 'Browser MMORPG with persistent progression.',
       tech: ['Laravel', 'Vue 3', 'InertiaJS', 'Tailwind CSS'],
       link: 'https://wisteriaonline.com',
       role: 'Solo Full-Stack Developer',
-      problem: 'Browser MMORPGs rarely give solo players a reason to keep coming back.',
-      challenge: 'Keeping combat and event systems performant in the browser without heavy client installs.',
-      solution: 'Built modular PvP/PvE systems with real-time polling and scalable event triggers, plus forums, guild tools and event calendars to drive retention.',
+      problem: 'Browser MMORPGs struggle to keep players returning.',
+      challenge: 'Keeping real-time combat and events fast in the browser.',
+      solution: 'Modular PvP/PvE systems with real-time polling, plus guilds, forums and event calendars for retention.',
       features: ['Real-time PvP/PvE systems', 'Guilds, forums & event calendars', 'Zones and quest lines inspired by Filipino culture'],
       gallery: null
     },
@@ -114,13 +98,13 @@ window.DASHBOARD_DATA = (function () {
       id: 'wasteland',
       title: 'Wasteland MMORPG',
       type: 'Games',
-      tagline: 'Post-apocalyptic themed browser MMORPG.',
+      tagline: 'Post-apocalyptic browser MMORPG.',
       tech: ['Laravel', 'Vue 3', 'InertiaJS', 'Tailwind CSS'],
       link: 'https://wastelandmmorpg.com',
       role: 'Solo Full-Stack Developer',
-      problem: 'Sister project exploring a different setting on the same live-service game engine.',
-      challenge: 'Adapting the same engine to a new setting without duplicating the underlying codebase.',
-      solution: 'Reused and extended the Wisteria Online engine with a post-apocalyptic faction and quest system.',
+      problem: 'A second setting on the same live-service engine.',
+      challenge: 'Reusing the engine without duplicating the codebase.',
+      solution: 'Extended the Wisteria engine with new factions and quest lines.',
       features: ['Shared modular game engine', 'Pause/resume event controls', 'Faction-based progression'],
       gallery: null
     },
@@ -128,27 +112,41 @@ window.DASHBOARD_DATA = (function () {
       id: 'aetask',
       title: 'AeTask',
       type: 'SaaS',
-      tagline: 'Kanban-style board and workflow management tool for teams.',
+      tagline: 'Kanban board for team workflows.',
       tech: ['Laravel', 'Vue.js', 'InertiaJS', 'Tailwind CSS'],
       link: 'https://aetask.xyz',
       role: 'Solo Full-Stack Developer',
-      problem: 'Small teams need a lightweight place to track work without the overhead of enterprise PM tools.',
-      challenge: 'Keeping the UI fast and uncluttered while still supporting real team workflows.',
-      solution: 'Built a focused Kanban board app covering boards, cards and team workflows end to end.',
-      features: ['Drag-and-drop Kanban boards', 'Team workspaces', 'Lightweight, fast UI'],
-      gallery: null
+      problem: 'Small teams need task tracking without enterprise overhead.',
+      challenge: 'Staying fast and uncluttered while supporting real workflows.',
+      solution: 'A focused Kanban app with boards, cards and team workspaces.',
+      features: ['Boards with custom columns and labels', 'Cards with attachments, assignees and due dates', 'Collaborators per board'],
+      gallery: 'AeTask'
+    },
+    {
+      id: 'scheduling',
+      title: 'Laser Scan Scheduling App',
+      type: 'Business Systems',
+      tagline: 'Scheduling and pricing platform for laser-scan requests.',
+      tech: ['Laravel', 'Vue 3', 'InertiaJS', 'Stripe'],
+      link: null,
+      role: 'Solo Full-Stack Developer',
+      problem: 'Clients had to go back and forth to price and book architectural laser scans.',
+      challenge: 'Offering realistic time slots based on scan duration and technician location.',
+      solution: 'Scan requests with instant pricing and a deposit, booking with recommended slots, and an admin panel for technicians, schedules and pricing.',
+      features: ['Instant pricing with a 20% deposit', 'Recommended time slots with estimated duration', 'Admin tools for technicians, schedules and pricing'],
+      gallery: 'Scheduling App'
     },
     {
       id: 'hjklcore',
       title: 'HJKL Core',
       type: 'Business Systems',
-      tagline: 'Multi-tenant POS platform with an owner dashboard and audit logging.',
+      tagline: 'Multi-tenant POS with owner dashboard and audit logs.',
       tech: ['Laravel', 'Vue.js', 'Multi-tenancy'],
       link: 'https://hjklcore.com',
       role: 'Full-Stack Developer',
-      problem: 'Businesses running multiple branches need one POS that keeps each location’s data isolated but reportable to ownership.',
-      challenge: 'Isolating tenant data completely while still giving the owner one unified reporting view.',
-      solution: 'Built a multi-tenant POS platform with an owner dashboard, audit logs and sales reporting per business.',
+      problem: 'Multi-branch businesses need one POS with isolated, reportable data.',
+      challenge: 'Full tenant isolation with a unified owner view.',
+      solution: 'Multi-tenant POS with owner dashboard, audit logs and per-business sales reports.',
       features: ['Multi-tenant data isolation', 'Owner dashboard & audit logs', 'Per-business sales reporting'],
       gallery: 'AE POS App'
     },
@@ -160,9 +158,9 @@ window.DASHBOARD_DATA = (function () {
       tech: ['Laravel', 'Vue.js', 'InertiaJS'],
       link: 'https://siciproducersctpl.com',
       role: 'Full-Stack Developer',
-      problem: 'Insurance producers needed a faster way to assess motor risk and issue CTPL policies without paper workflows.',
-      challenge: 'Modeling motor risk assessment rules accurately while keeping the issuance flow fast for producers.',
-      solution: 'Built an issuance platform covering motor risk assessment, policy issuance and a producer wallet.',
+      problem: 'Producers needed to assess risk and issue policies without paper workflows.',
+      challenge: 'Modeling risk rules accurately while keeping issuance fast.',
+      solution: 'Issuance platform with motor risk assessment, digital policies and a producer wallet.',
       features: ['Motor risk assessment', 'Digital policy issuance', 'Producer wallet & payouts'],
       gallery: 'InsurApp'
     },
@@ -170,13 +168,13 @@ window.DASHBOARD_DATA = (function () {
       id: 'resumatik',
       title: 'Resumatik',
       type: 'SaaS',
-      tagline: 'Online CV/resume builder for polished, ready-to-send resumes.',
+      tagline: 'Online resume builder with PDF export.',
       tech: ['Laravel', 'Vue.js', 'PDF Generation'],
       link: 'https://resumatik.xyz',
       role: 'Solo Full-Stack Developer',
-      problem: 'Job seekers need a fast way to produce a clean, professional resume without wrestling with document formatting.',
-      challenge: 'Generating pixel-accurate PDF exports that match the on-screen live preview.',
-      solution: 'Built an online builder with live preview and export to a polished, ready-to-send PDF.',
+      problem: 'Job seekers need clean resumes without fighting document formatting.',
+      challenge: 'PDF exports that match the live preview exactly.',
+      solution: 'A builder with live preview and one-click PDF export.',
       features: ['Live resume preview', 'PDF export', 'Multiple layout templates'],
       gallery: 'Resumatik'
     },
@@ -184,13 +182,13 @@ window.DASHBOARD_DATA = (function () {
       id: 'business-page',
       title: 'Business Landing Page',
       type: 'Business Systems',
-      tagline: 'Modern landing page built to showcase services and convert visitors into customers.',
+      tagline: 'Landing page built to convert visitors into customers.',
       tech: ['Next.js', 'Vercel'],
       link: 'https://business-page-ten-delta.vercel.app',
       role: 'Full-Stack Developer',
-      problem: 'A business needed a fast, modern landing page to present its services and drive inquiries.',
-      challenge: 'Shipping a fast, conversion-focused page on a tight scope and timeline.',
-      solution: 'Designed and shipped a focused landing page optimized for clarity and conversion.',
+      problem: 'A business needed a fast landing page to present its services.',
+      challenge: 'Shipping a conversion-focused page on a tight scope.',
+      solution: 'A focused, fast landing page deployed on Vercel.',
       features: ['Conversion-focused layout', 'Fast, modern deployment on Vercel'],
       gallery: null
     },
@@ -198,13 +196,13 @@ window.DASHBOARD_DATA = (function () {
       id: 'client-projects',
       title: 'Client Projects',
       type: 'Web Apps',
-      tagline: 'A mix of freelance and agency client builds.',
+      tagline: 'Freelance and agency client builds.',
       tech: ['Laravel', 'Vue.js', 'InertiaJS'],
       link: null,
       role: 'Full-Stack Developer',
-      problem: 'Freelance and agency clients each needed custom web applications built to their own spec.',
-      challenge: 'Adapting to a different codebase and set of requirements with each client engagement.',
-      solution: 'Delivered a range of client builds using Laravel with Vue and InertiaJS.',
+      problem: 'Each client needed a custom web app built to spec.',
+      challenge: 'Adapting to a new codebase and requirements each time.',
+      solution: 'Custom apps delivered with Laravel, Vue and Inertia.',
       features: ['Custom admin panels', 'Client-specific workflows', 'Laravel + Vue + Inertia stack'],
       gallery: 'Client Projects'
     },
@@ -212,13 +210,13 @@ window.DASHBOARD_DATA = (function () {
       id: 'mswd',
       title: 'MSWD Makati App',
       type: 'Business Systems',
-      tagline: 'Social welfare management system for Makati City Government.',
+      tagline: 'Social welfare system for Makati City Government.',
       tech: ['Laravel', 'Vue 2'],
       link: null,
       role: 'Full-Stack Developer',
-      problem: 'Local government needed a secure system to manage social welfare records at scale.',
-      challenge: 'Handling large volumes of case records securely under government data-access rules.',
-      solution: 'Built the MSWD system with layered security and query optimization for data accuracy and performance.',
+      problem: 'Local government needed secure, large-scale case-record management.',
+      challenge: 'Securing large record volumes under government access rules.',
+      solution: 'Layered security and query optimization for accuracy and speed at scale.',
       features: ['Layered access security', 'Optimized queries at scale', 'Government case-record management'],
       gallery: 'MSWD Makati App'
     },
@@ -230,9 +228,9 @@ window.DASHBOARD_DATA = (function () {
       tech: ['Laravel', 'Vue', 'InertiaJS'],
       link: null,
       role: 'Full-Stack Developer',
-      problem: 'A rheumatology clinic needed to manage patient records and visits digitally.',
-      challenge: 'Mapping an existing paper-based clinic workflow into a usable digital system.',
-      solution: 'Built a clinic management app tailored to the practice’s workflow.',
+      problem: 'A clinic needed digital patient records and visit tracking.',
+      challenge: 'Mapping a paper-based workflow into a usable system.',
+      solution: 'A clinic app tailored to the practice’s workflow.',
       features: ['Patient record management', 'Visit scheduling', 'Clinic-specific workflow'],
       gallery: 'Rheummate'
     },
@@ -240,13 +238,13 @@ window.DASHBOARD_DATA = (function () {
       id: 'orient-glass',
       title: 'Orient Glass Quotation App',
       type: 'Business Systems',
-      tagline: 'Quotation and estimate management system for a glass supplier.',
+      tagline: 'Quotation and estimate system for a glass supplier.',
       tech: ['Laravel', 'Vue', 'InertiaJS'],
       link: null,
       role: 'Full-Stack Developer',
-      problem: 'A glass supplier needed a faster, more accurate way to produce customer quotations and estimates.',
-      challenge: 'Modeling supplier-specific pricing rules accurately inside the quotation builder.',
-      solution: 'Built a quotation and estimate management system covering the full pricing workflow.',
+      problem: 'Quotations were slow and error-prone.',
+      challenge: 'Encoding supplier-specific pricing rules accurately.',
+      solution: 'A quotation builder covering the full pricing workflow.',
       features: ['Quotation builder', 'Estimate tracking', 'Supplier-specific pricing rules'],
       gallery: 'Orient Glass Quotation App'
     },
@@ -254,13 +252,13 @@ window.DASHBOARD_DATA = (function () {
       id: 'vpi-cars',
       title: 'VPI Cars App',
       type: 'Business Systems',
-      tagline: 'Nationwide car rental platform for admins, affiliates and bookings.',
+      tagline: 'Nationwide car rental platform.',
       tech: ['Laravel', 'Vue.js SPA', 'Pinia'],
       link: null,
       role: 'Full-Stack Developer',
-      problem: 'A car rental business needed to manage nationwide bookings across admins and affiliate partners.',
-      challenge: 'Coordinating booking availability across admins and affiliate partners in real time.',
-      solution: 'Built a full-featured rental platform with end-to-end admin and affiliate booking workflows.',
+      problem: 'Bookings spanned admins and affiliate partners nationwide.',
+      challenge: 'Keeping availability in sync across admins and affiliates.',
+      solution: 'End-to-end admin and affiliate booking workflows.',
       features: ['Admin & affiliate roles', 'Nationwide booking management', 'Vue SPA with Pinia state'],
       gallery: 'VPI Cars App'
     },
@@ -268,13 +266,13 @@ window.DASHBOARD_DATA = (function () {
       id: 'openai-app',
       title: 'OpenAI App',
       type: 'SaaS',
-      tagline: 'Content tool for writers with OpenAI-assisted header generation.',
+      tagline: 'Writing tool with OpenAI-assisted headers.',
       tech: ['Laravel', 'Vue.js', 'InertiaJS', 'OpenAI'],
       link: null,
       role: 'Full-Stack Developer',
-      problem: 'Writers needed help generating structured, on-brand headers at scale.',
-      challenge: 'Structuring OpenAI output into a consistent, reusable header hierarchy.',
-      solution: 'Built OpenAI-assisted header generation with a family-tree hierarchy for header labeling and trend tracking.',
+      problem: 'Writers needed structured, on-brand headers at scale.',
+      challenge: 'Turning AI output into a consistent header hierarchy.',
+      solution: 'OpenAI-assisted header generation with hierarchy labeling and trend tracking.',
       features: ['OpenAI-assisted generation', 'Header hierarchy tooling', 'Trend tracking'],
       gallery: 'OpenAI App'
     },
@@ -282,15 +280,41 @@ window.DASHBOARD_DATA = (function () {
       id: 'wp-shopify',
       title: 'WordPress & Shopify Client Work',
       type: 'E-commerce',
-      tagline: 'Custom WordPress themes/plugins and Shopify store maintenance for clients.',
+      tagline: 'Custom WordPress and Shopify client sites.',
       tech: ['WordPress', 'Shopify', 'PHP'],
       link: null,
       role: 'Full-Stack Developer',
-      problem: 'Clients needed custom storefronts and content sites without being locked to generic themes.',
-      challenge: 'Delivering custom builds within WordPress and Shopify\'s theming constraints.',
-      solution: 'Built custom WordPress themes and plugins, and maintained a single-vendor Shopify store.',
+      problem: 'Clients wanted storefronts beyond generic themes.',
+      challenge: 'Custom builds within platform theming limits.',
+      solution: 'Custom themes and plugins, plus Shopify store maintenance.',
       features: ['Custom WordPress themes & plugins', 'Shopify store maintenance', 'Content site management'],
       gallery: null
+    }
+  ];
+
+  // Company and period are intentionally omitted: add `period` (and change `org`
+  // to the company name) per entry once the details are known.
+  var support = [
+    {
+      org: 'Executive Assistant',
+      role: 'Administrative support',
+      period: '',
+      desc: 'Supported executives with calendar, inbox and travel coordination, meeting preparation and reporting.',
+      tags: ['Calendar management', 'Travel coordination', 'Reporting']
+    },
+    {
+      org: 'Virtual Assistant',
+      role: 'Remote support',
+      period: '',
+      desc: 'Remote support for clients: email and schedule management, data entry, research and communication.',
+      tags: ['Email management', 'Data entry', 'Research']
+    },
+    {
+      org: 'Administrative Assistant',
+      role: 'Office support',
+      period: '',
+      desc: 'Handled documentation, records, scheduling and day-to-day office coordination.',
+      tags: ['Documentation', 'Scheduling', 'Records']
     }
   ];
 
@@ -304,77 +328,77 @@ window.DASHBOARD_DATA = (function () {
       role: 'Full Stack Web Developer',
       org: 'RCSC Ltd — Remote (US)',
       period: 'Heavy Equipment Rental · Solo Development',
-      desc: 'Developed a full-featured heavy equipment rental platform enabling efficient booking, real-time inventory management and seamless customer interactions, with a responsive interface optimized across desktop and mobile.',
+      desc: 'Solo-built a heavy equipment rental platform with booking, real-time inventory and a responsive UI.',
       tags: ['Laravel', 'Vue 3', 'InertiaJS', 'Tailwind CSS', 'Stripe API', 'CalendarJS', 'ChatGPT']
     },
     {
       role: 'Full Stack Web Developer',
       org: 'GuttVannm Architect — Remote (US)',
       period: 'Solo Development',
-      desc: 'Built a scheduling app for architectural laser scan requests — clients see the shortest technician route on booking, plus full visibility into scan requests and scheduled appointments.',
+      desc: 'Solo-built a scheduling app for laser-scan requests that shows clients the shortest technician route.',
       tags: ['Laravel', 'Vue 3', 'InertiaJS', 'Tailwind CSS', 'Figma', 'ChatGPT', 'GitHub Copilot', 'Stripe API']
     },
     {
       role: 'Full Stack Web Developer',
       org: 'Wisteria Online & Wasteland MMORPG',
       period: 'Personal Project · Solo Development',
-      desc: 'Built modular PvP/PvE systems with real-time polling, pause/resume controls and scalable event triggers, plus forums, guild tools and event calendars to drive player retention. Zones, factions and quest lines are inspired by Filipino culture.',
+      desc: 'Modular PvP/PvE systems with real-time polling, plus guild tools, forums and event calendars.',
       tags: ['Laravel', 'Vue 3', 'InertiaJS', 'Tailwind CSS', 'Canva', 'ChatGPT', 'GitHub Copilot']
     },
     {
       role: 'Full Stack Web Developer',
       org: 'TITAN Inc.',
       period: 'Full time',
-      desc: 'Developed the MSWD system for Makati City Government, with layered security and query optimization for data accuracy and performance at scale.',
+      desc: 'Built the MSWD system for Makati City Government, with layered security and query optimization.',
       tags: ['Laravel', 'Vue.js', 'Bootstrap CSS', 'RESTful API']
     },
     {
       role: 'Full Stack Web Developer',
       org: 'VPI Cars Manila',
       period: 'Contractual',
-      desc: 'Built a nationwide car rental platform with end-to-end admin and affiliate booking workflows.',
+      desc: 'Built a nationwide car rental platform with admin and affiliate booking workflows.',
       tags: ['Laravel', 'Vue.js', 'Tailwind CSS', 'RESTful API']
     },
     {
       role: 'Full Stack Web Developer',
       org: 'Local Client',
       period: 'Project based',
-      desc: 'Built a hair-cut scheduling system with multi-tenancy support for multiple business locations.',
+      desc: 'Built a multi-tenant hair-cut scheduling system for multiple business locations.',
       tags: ['Laravel', 'Blade', 'Bootstrap CSS']
     },
     {
       role: 'Full Stack Web Developer',
       org: 'Nest18',
       period: 'Project based',
-      desc: 'Built OpenAI-assisted header generation for writers, including a family-tree hierarchy for header labeling.',
+      desc: 'Built OpenAI-assisted header generation with a family-tree hierarchy for labeling.',
       tags: ['Laravel', 'Vue.js', 'InertiaJS', 'Tailwind CSS', 'OpenAI']
     },
     {
       role: 'Backend Developer',
       org: 'CresCode Inc.',
       period: 'Apr 2023 – Dec 2023',
-      desc: 'Developed and refactored REST APIs, migrated legacy Laravel projects to newer versions, and tested endpoints in SwaggerUI.',
+      desc: 'Built and refactored REST APIs, migrated legacy Laravel projects and tested endpoints in SwaggerUI.',
       tags: ['Laravel', 'RESTful API', 'SwaggerUI']
     },
     {
       role: 'Full Stack Web Developer',
       org: 'FoxComm Ltd',
       period: 'Apr 2021 – Apr 2023',
-      desc: 'Built projects with Laravel, Vue and InertiaJS, managed WordPress blogs, and maintained a single-vendor Shopify store.',
+      desc: 'Built Laravel and Vue projects, managed WordPress blogs and maintained a Shopify store.',
       tags: ['Laravel', 'Vue.js', 'InertiaJS', 'WordPress', 'Shopify']
     },
     {
       role: 'Full Stack Web Developer',
       org: 'Artisans Developer',
       period: 'May 2020 – Apr 2021',
-      desc: 'Built sites on Laravel, WordPress and Shopify, with UI and graphic design work in Canva.',
+      desc: 'Built Laravel, WordPress and Shopify sites, plus UI and graphics in Canva.',
       tags: ['Laravel', 'WordPress', 'Shopify', 'Canva']
     },
     {
       role: 'Full Stack Web Developer',
       org: 'Segworks',
       period: 'Mar 2019 – Apr 2020',
-      desc: 'Maintained databases, refactored queries, and developed new features and fixes.',
+      desc: 'Maintained databases, refactored queries and shipped features and fixes.',
       tags: ['PHP', 'MySQL']
     }
   ];
@@ -387,6 +411,7 @@ window.DASHBOARD_DATA = (function () {
     projectTypes: projectTypes,
     projects: projects,
     education: education,
-    experience: experience
+    experience: experience,
+    support: support
   };
 })();
